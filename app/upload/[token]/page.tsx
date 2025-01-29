@@ -35,6 +35,7 @@ export default function UploadPage() {
   const [uploadStatus, setUploadStatus] = useState<UploadStatus>({ state: "idle" })
   const [step, setStep] = useState(1)
   const [isDragging, setIsDragging] = useState(false)
+  const [acceptedTerms, setAcceptedTerms] = useState(false)
 
   useEffect(() => {
     const pathToken = window.location.pathname.split("/").pop()
@@ -89,6 +90,14 @@ export default function UploadPage() {
     if (!file || !email) return
     if (!isValidEmail(email)) {
       setUploadStatus({ state: "error", message: "Please enter a valid email address." })
+      return
+    }
+    if (!acceptedTerms) {
+      setUploadStatus({
+        state: "error",
+        message:
+          "Please review and accept our Terms of Service, Privacy Policy, and Data Use Policy to proceed with your analysis.",
+      })
       return
     }
 
@@ -313,7 +322,31 @@ export default function UploadPage() {
                         received.
                       </p>
                     </div>
-
+                    <div className="flex items-center space-x-2 mb-4">
+                      <input
+                        type="checkbox"
+                        id="terms-checkbox"
+                        checked={acceptedTerms}
+                        onChange={(e) => setAcceptedTerms(e.target.checked)}
+                        className="rounded border-gray-300 text-[#4B6FEE] focus:ring-[#4B6FEE]"
+                      />
+                      <label htmlFor="terms-checkbox" className="text-sm text-gray-600">
+                        I have read, understood, and agree to be bound by the{" "}
+                        <a href="/terms" className="text-[#4B6FEE] hover:underline">
+                          Terms of Service
+                        </a>
+                        ,{" "}
+                        <a href="/privacy" className="text-[#4B6FEE] hover:underline">
+                          Privacy Policy
+                        </a>
+                        , and{" "}
+                        <a href="/data-use" className="text-[#4B6FEE] hover:underline">
+                          Data Use Policy
+                        </a>
+                        . I consent to the collection, processing, and storage of my personal information as described
+                        in these policies.
+                      </label>
+                    </div>
                     <div className="flex justify-between items-center pt-4">
                       <Button
                         type="button"
@@ -344,6 +377,13 @@ export default function UploadPage() {
 
                 {uploadStatus.state === "error" && uploadStatus.message && (
                   <div className="mt-4 p-4 bg-red-50 text-red-700 rounded-lg flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path
+                        fillRule="evenodd"
+                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                     <span className="text-sm font-medium">{uploadStatus.message}</span>
                   </div>
                 )}
@@ -355,4 +395,5 @@ export default function UploadPage() {
     </div>
   )
 }
+
 
