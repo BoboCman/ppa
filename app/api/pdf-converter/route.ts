@@ -3,17 +3,6 @@ import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
 import { PDFOptions } from 'puppeteer-core';
 
-// Configure extended runtime for Vercel
-export const config = {
-  maxDuration: 300, // 5 minutes maximum runtime
-  api: {
-    bodyParser: {
-      sizeLimit: '15mb', // Increased body size limit for larger HTML
-    },
-    responseLimit: '20mb', // Increased response size limit for PDF
-  },
-};
-
 // Custom error types
 interface ConversionError extends Error {
     stack?: string;
@@ -37,7 +26,7 @@ const PDF_OPTIONS: PDFOptions = {
             <span style="float: right;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
         </div>
     `,
-    timeout: 240000 // Increased timeout to 4 minutes for more reliability
+    timeout: 60000 // Increased timeout for more reliability
 };
 
 export async function POST(request: Request) {
@@ -62,8 +51,6 @@ export async function POST(request: Request) {
                 '--disable-dev-shm-usage', // Prevents OOM in container environments
                 '--disable-gpu',           // Reduces rendering inconsistencies
                 '--disable-web-security',  // Helps with fonts and resources
-                '--single-process',        // Better for serverless environments
-                '--no-zygote',             // Improves startup time in serverless
                 '--disable-features=IsolateOrigins,site-per-process' // Improves stability
             ],
             defaultViewport: {
@@ -73,13 +60,12 @@ export async function POST(request: Request) {
             },
             executablePath: await chromium.executablePath(),
             headless: chromium.headless,
-            timeout: 180000 // 3 minute browser launch timeout
         });
 
         // Create page with extended timeout
         const page = await browser.newPage();
-        await page.setDefaultNavigationTimeout(180000); // 3 minutes
-        await page.setDefaultTimeout(180000); // 3 minutes
+        await page.setDefaultNavigationTimeout(60000);
+        await page.setDefaultTimeout(60000);
 
         // Intercept console messages for better debugging
         page.on('console', msg => console.log('Browser console:', msg.text()));
@@ -122,13 +108,13 @@ export async function POST(request: Request) {
             return true;
         });
 
-        // Set content with robust loading strategy and extended timeout
+        // Set content with robust loading strategy
         await page.setContent(html, { 
             waitUntil: ['networkidle0', 'domcontentloaded', 'load'],
-            timeout: 120000 // 2 minutes
+            timeout: 45000
         });
 
-        // Ensure all resources and fonts are loaded with robust error handling and extended timeouts
+        // Ensure all resources and fonts are loaded with robust error handling
         await Promise.all([
             // Wait for fonts to load
             page.evaluateHandle(() => {
@@ -141,7 +127,7 @@ export async function POST(request: Request) {
                             });
                     } else {
                         // Fallback for browsers without document.fonts
-                        setTimeout(resolve, 3000); // Increased from 2000
+                        setTimeout(resolve, 2000);
                     }
                 });
             }),
@@ -158,7 +144,7 @@ export async function POST(request: Request) {
                     window.addEventListener('load', () => resolve(true));
                     
                     // Fallback timeout in case load never fires
-                    setTimeout(() => resolve(true), 10000); // Increased from 5000
+                    setTimeout(() => resolve(true), 5000);
                 });
             })
         ]).catch(err => {
@@ -167,7 +153,7 @@ export async function POST(request: Request) {
         });
 
         // Add a delay to ensure everything is rendered
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Increased from 2000
+        await new Promise(resolve => setTimeout(resolve, 2000));
 
         // Take a screenshot for debugging purposes
         const screenshotBuffer = await page.screenshot({ 
@@ -227,7 +213,7 @@ export async function POST(request: Request) {
 
 // Helper function to extract HTML from request with retry logic
 async function getHtmlFromRequest(request: Request): Promise<string> {
-    const maxRetries = 5; // Increased from 3 to 5 retries
+    const maxRetries = 3;
     let attempt = 0;
     
     while (attempt < maxRetries) {
@@ -264,8 +250,8 @@ async function getHtmlFromRequest(request: Request): Promise<string> {
                 throw requestError;
             }
             
-            // Wait before retrying with exponential backoff
-            await new Promise(resolve => setTimeout(resolve, 1000 * Math.pow(2, attempt-1)));
+            // Wait before retrying
+            await new Promise(resolve => setTimeout(resolve, 1000));
         }
     }
     
