@@ -22,7 +22,7 @@ const PDF_OPTIONS: PDFOptions = {
     headerTemplate: '<div></div>',
     footerTemplate: `
         <div style="font-size: 8pt; width: 100%; padding: 0 0.5in; margin-top: 20px">
-            <span style="color: #2d3748;">Confidential</span>
+            <span style="color: #2d3748;">Insurance Planner AI - Policy Analysis Report</span>
             <span style="float: right;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
         </div>
     `,
