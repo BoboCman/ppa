@@ -20,7 +20,6 @@ export default function Navigation() {
     { href: "/about", label: "Why Review?" },
     { href: "/services", label: "Services" },
     { href: "/decision-pathways", label: "Decision Paths" },
-    { href: "/carriers", label: "Carriers" },
   ]
 
   const isActivePath = (path: string) => pathname === path
