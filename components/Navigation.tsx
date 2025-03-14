@@ -160,7 +160,6 @@ export default function Navigation() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  Ask Our AI Helper
                 </button>
               </div>
             </div>
