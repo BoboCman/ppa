@@ -1,4 +1,4 @@
-"use client"
+/* "use client"
 
 import { useState, useEffect } from "react"
 import { X, RefreshCw } from "lucide-react"
@@ -140,3 +140,4 @@ export function ChatInterface({ onClose }: ChatInterfaceProps) {
     </div>
   )
 }
+*/
