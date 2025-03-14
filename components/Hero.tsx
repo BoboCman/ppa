@@ -13,7 +13,6 @@ import {
   TrendingUp,
   Lock,
   LineChart,
-  ChevronRight,
   ChevronDown,
   UploadIcon,
   Brain,
@@ -35,7 +34,7 @@ export const Hero: FC = () => {
   }
 
   return (
-
+    <section className="w-full relative" aria-labelledby="hero-title">
       {/* Hero Section */}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -372,4 +371,3 @@ export const Hero: FC = () => {
 }
 
 export default Hero
-
