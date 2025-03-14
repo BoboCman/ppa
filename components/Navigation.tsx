@@ -17,7 +17,6 @@ export default function Navigation() {
     { href: "/", label: "Home" },
     { href: "/about", label: "Why Review?" },
     { href: "/services", label: "Services" },
-    { href: "/decision-pathways", label: "Decision Paths" },
   ]
 
   const isActivePath = (path: string) => pathname === path
