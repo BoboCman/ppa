@@ -28,7 +28,7 @@ const CarriersPage: FC = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#4B6FEE] mb-6">Carrier Independence</h2>
             <p className="text-gray-600 text-lg text-center mb-12 max-w-3xl mx-auto">
-              As a truly independent agency, we're not tied to any single carrier. This allows us to recommend the best
+              As a truly independent agency, we are not tied to any single carrier. This allows us to recommend the best
               solution for your unique situation, without conflicts of interest.
             </p>
 
