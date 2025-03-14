@@ -35,16 +35,6 @@ export const Hero: FC = () => {
   }
 
   return (
-    <section className="w-full relative" aria-labelledby="hero-title">
-      {/* Advisor Banner */}
-      <div className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 text-blue-700 py-2 px-4 text-center border-b border-blue-100/50">
-        <Link
-          href="/advisor-demo"
-          className="text-base font-medium hover:underline inline-flex items-center gap-2 transition-colors hover:text-blue-800"
-        >
-          Insurance Professionals? Schedule a Demo <ChevronRight className="w-4 h-4" />
-        </Link>
-      </div>
 
       {/* Hero Section */}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
