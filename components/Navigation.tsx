@@ -5,11 +5,9 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X, Upload } from 'lucide-react'
 import { Logo } from "@/components/Logo"
-import { ChatInterface } from "@/components/ChatInterface"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [showChat, setShowChat] = useState(false)
   const pathname = usePathname()
 
   // If the current path is /login, don't render anything
@@ -78,30 +76,6 @@ export default function Navigation() {
                 <Upload size={18} />
                 Upload Policy
               </Link>
-
-              {/* Chat with Sage Button */}
-              <button
-                onClick={() => setShowChat(true)}
-                className="bg-green-600 hover:bg-green-700 text-white rounded-full px-5 py-2 flex items-center gap-2 transition-all duration-300"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="text-white"
-                >
-                  <path
-                    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.4876 3.36093 14.891 4 16.1272L3 21L7.87279 20C9.10904 20.6391 10.5124 21 12 21Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                Ask Our AI Helper
-              </button>
             </div>
           </div>
 
@@ -135,40 +109,11 @@ export default function Navigation() {
                   <Upload size={18} />
                   Upload Policy
                 </Link>
-
-                {/* Mobile Chat Button */}
-                <button
-                  onClick={() => {
-                    setShowChat(true)
-                    setIsOpen(false)
-                  }}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full px-6 py-2 flex items-center justify-center gap-2 my-2"
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-white"
-                  >
-                    <path
-                      d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.4876 3.36093 14.891 4 16.1272L3 21L7.87279 20C9.10904 20.6391 10.5124 21 12 21Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
               </div>
             </div>
           )}
         </div>
       </nav>
-
-      {/* Chat Interface */}
-      {showChat && <ChatInterface onClose={() => setShowChat(false)} />}
     </>
   )
 }
