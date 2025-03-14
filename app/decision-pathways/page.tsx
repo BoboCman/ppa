@@ -16,7 +16,7 @@ const DecisionPathwaysPage: FC = () => {
               Understanding Your Options
             </h1>
             <p className="text-xl md:text-2xl text-gray-600">
-              After your policy review, you'll have three clear paths forward
+              After your policy review, you will have three clear paths forward
             </p>
           </div>
         </div>
@@ -243,7 +243,7 @@ const DecisionPathwaysPage: FC = () => {
           <div className="max-w-3xl mx-auto">
             <div className="border border-gray-200 rounded-lg bg-gray-50 p-8 text-center">
               <h3 className="text-xl font-medium text-gray-600 mb-2">Client Success Stories Coming Soon</h3>
-              <p className="text-gray-500">We're working with clients now and will share their experiences here</p>
+              <p className="text-gray-500">We are working with clients now and will share their experiences here</p>
             </div>
           </div>
         </div>
