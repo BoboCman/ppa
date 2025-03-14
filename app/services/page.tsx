@@ -140,7 +140,7 @@ const ServicesPage: FC = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-[#4B6FEE] mb-6">Why Human Expertise Matters</h2>
             <p className="text-gray-600 text-lg text-center mb-12 max-w-3xl mx-auto">
-              While AI excels at data analysis, life insurance decisions aren't purely mathematical. Your consultation
+              While AI excels at data analysis, life insurance decisions are not purely mathematical. Your consultation
               with an independent expert ensures you get both technical insights and personalized guidance.
             </p>
 
