@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Upload } from 'lucide-react'
 import { Logo } from "@/components/Logo"
 import { ChatInterface } from "@/components/ChatInterface"
 
@@ -18,6 +18,9 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "Why Review?" },
+    { href: "/services", label: "Services" },
+    { href: "/decision-pathways", label: "Decision Paths" },
+    { href: "/carriers", label: "Carriers" },
     { href: "/resources", label: "Help Center" },
   ]
 
@@ -25,6 +28,16 @@ export default function Navigation() {
 
   return (
     <>
+      {/* Advisor Banner */}
+      <div className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 text-blue-700 py-2 px-4 text-center border-b border-blue-100/50">
+        <Link
+          href="/advisor-demo"
+          className="text-base font-medium hover:underline inline-flex items-center gap-2 transition-colors hover:text-blue-800"
+        >
+          Insurance Professionals? Schedule a Demo <span className="text-xs">→</span>
+        </Link>
+      </div>
+
       <nav className="bg-white border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
@@ -40,7 +53,7 @@ export default function Navigation() {
             </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -59,10 +72,19 @@ export default function Navigation() {
                 </Link>
               ))}
 
+              {/* Upload Button */}
+              <Link
+                href="/upload"
+                className="bg-[#4B6FEE] hover:bg-[#3B4FDE] text-white rounded-full px-5 py-2 flex items-center gap-2 transition-all duration-300"
+              >
+                <Upload size={18} />
+                Upload Policy
+              </Link>
+
               {/* Chat with Sage Button */}
               <button
                 onClick={() => setShowChat(true)}
-                className="bg-[#4B6FEE] hover:bg-[#3B4FDE] text-white rounded-full px-6 py-2 flex items-center gap-2 transition-all duration-300"
+                className="bg-green-600 hover:bg-green-700 text-white rounded-full px-5 py-2 flex items-center gap-2 transition-all duration-300"
               >
                 <svg
                   width="20"
@@ -106,13 +128,23 @@ export default function Navigation() {
                   </Link>
                 ))}
 
+                {/* Mobile Upload Button */}
+                <Link
+                  href="/upload"
+                  className="block w-full bg-[#4B6FEE] hover:bg-[#3B4FDE] text-white rounded-full px-6 py-2 flex items-center justify-center gap-2 my-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Upload size={18} />
+                  Upload Policy
+                </Link>
+
                 {/* Mobile Chat Button */}
                 <button
                   onClick={() => {
                     setShowChat(true)
                     setIsOpen(false)
                   }}
-                  className="w-full bg-[#4B6FEE] hover:bg-[#3B4FDE] text-white rounded-full px-6 py-2 flex items-center justify-center gap-2 my-2"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full px-6 py-2 flex items-center justify-center gap-2 my-2"
                 >
                   <svg
                     width="20"
@@ -143,4 +175,3 @@ export default function Navigation() {
     </>
   )
 }
-
