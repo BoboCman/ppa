@@ -18,22 +18,14 @@ export default function Navigation() {
     { href: "/about", label: "Why Review?" },
     { href: "/services", label: "Services" },
     { href: "/decision-pathways", label: "Decision Paths" },
+    { href: "/carriers", label: "Carriers" },
+    { href: "/resources", label: "Help Center" },
   ]
 
   const isActivePath = (path: string) => pathname === path
 
   return (
     <>
-      {/* Advisor Banner */}
-      <div className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 text-blue-700 py-2 px-4 text-center border-b border-blue-100/50">
-        <Link
-          href="/advisor-demo"
-          className="text-base font-medium hover:underline inline-flex items-center gap-2 transition-colors hover:text-blue-800"
-        >
-          Insurance Professionals? Schedule a Demo <span className="text-xs">→</span>
-        </Link>
-      </div>
-
       <nav className="bg-white border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
