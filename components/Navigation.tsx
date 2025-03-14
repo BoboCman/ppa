@@ -21,7 +21,6 @@ export default function Navigation() {
     { href: "/services", label: "Services" },
     { href: "/decision-pathways", label: "Decision Paths" },
     { href: "/carriers", label: "Carriers" },
-    { href: "/resources", label: "Help Center" },
   ]
 
   const isActivePath = (path: string) => pathname === path
