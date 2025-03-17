@@ -12,7 +12,7 @@ export function Footer() {
               Insurance Planner AI
             </h3>
             <p className="text-text-light text-sm md:text-base">
-              AI-driven insurance analysis by Financial Planner AI, LLC.
+              AI-driven automation by Financial Planner AI, LLC.
             </p>
           </div>
           {/* Quick Links */}
@@ -42,7 +42,7 @@ export function Footer() {
                   href="/resources" 
                   className="text-text-light hover:text-text block py-2 md:py-0"
                 >
-                  Resources
+                  Contact
                 </Link>
               </li>
             </ul>
