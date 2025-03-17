@@ -151,14 +151,8 @@ const PolicyReviewQuiz = () => {
                 <Button
                   key={index}
                   onClick={() => handleAnswer(index)}
-                  variant={
-                    index === 0 ? "outline" : index === options[currentQuestion].length - 1 ? "default" : "outline"
-                  }
-                  className={`justify-start text-left py-4 ${
-                    index === options[currentQuestion].length - 1
-                      ? "bg-[#4B6FEE] hover:bg-blue-700 text-white"
-                      : "border-[#4B6FEE] text-[#4B6FEE] hover:bg-blue-50"
-                  }`}
+                  variant="outline"
+                  className="justify-start text-left py-4 border-[#4B6FEE] text-[#4B6FEE] hover:bg-blue-50"
                 >
                   {option}
                 </Button>
