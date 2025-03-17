@@ -269,8 +269,8 @@ export const Hero: FC = () => {
             {/* Sample Reports */}
             <div>
               <div className="text-center mb-12 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">What You&apos;ll Receive</h2>
-                <p className="text-gray-600 text-lg">Our AI Analysis Package two reports tailored to policy needs</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">Two-Tier Analysis for Complete Policy Clarity</h2>
+                <p className="text-gray-600 text-lg">Our AI delivers two complementary reports tailored to different policy analysis needs</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -344,9 +344,9 @@ export const Hero: FC = () => {
                   <div className="rounded-full bg-white/10 p-2 transition-transform duration-300 group-hover:scale-110">
                     <Zap className="w-8 h-8" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold">Ready for Instant Policy Insights?</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">Ready for AI-Powered Policy Insights?</h2>
                 </div>
-                <p className="text-xl text-blue-100">Upload the illustration and receive both analysis reports within minutes.</p>
+                <p className="text-xl text-blue-100">Upload any in-force illustration and receive both analysis reports within minutes.</p>
               </CardHeader>
               <CardContent className="flex justify-center p-8 bg-gradient-to-b from-white to-blue-50/30">
                 <Button
