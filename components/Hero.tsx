@@ -64,7 +64,7 @@ export const Hero: FC = () => {
                     <Zap className="w-8 h-8 text-[#4B6FEE]" aria-hidden="true" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-[#4B6FEE] text-center">
-                    The Next Generation of Insurance Policy Analysis
+                    The Next Generation of Insurance Policy Reviews
                   </h3>
                   <p className="text-gray-600 text-lg leading-relaxed max-w-3xl text-center">
                     Get clarity on life insurance policies instantly – our AI transforms complex insurance documents
@@ -81,7 +81,7 @@ export const Hero: FC = () => {
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-2" aria-hidden="true" />
-                      <span>Expert-Level Analysis</span>
+                      <span>Expert-Level Reviews</span>
                     </div>
                   </div>
                   <div className="flex items-center text-[#4B6FEE] font-bold text-lg">
@@ -186,7 +186,7 @@ export const Hero: FC = () => {
                 className="bg-[#4B6FEE] hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold group transition-all duration-300 hover:transform hover:scale-105 flex items-center"
               >
                 <LineChart className="w-6 h-6 mr-2 group-hover:animate-pulse" aria-hidden="true" />
-                <span>Explore AI Analysis</span>
+                <span>Explore Policy Review</span>
                 <ChevronDown className="w-5 h-5 ml-2 transition-transform group-hover:translate-y-1" />
               </Button>
               <p className="text-sm text-gray-600">↓ See what&apos;s included</p>
@@ -200,7 +200,7 @@ export const Hero: FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">What Our AI Analysis Reveals</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">What Our Policy Review Reveals</h2>
               <p className="text-gray-600 text-lg">Comprehensive insights for policyholders and advisors</p>
             </div>
 
@@ -256,7 +256,7 @@ export const Hero: FC = () => {
                 <span>Sample Reports</span>
                 <ChevronDown className="w-5 h-5 ml-2 transition-transform group-hover:translate-y-1" />
               </Button>
-              <p className="text-sm text-gray-600">↓ View example analyses</p>
+              <p className="text-sm text-gray-600">↓ View example reviews</p>
             </div>
           </div>
         </div>
@@ -269,8 +269,8 @@ export const Hero: FC = () => {
             {/* Sample Reports */}
             <div>
               <div className="text-center mb-12 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">Two-Tier Analysis for Complete Policy Clarity</h2>
-                <p className="text-gray-600 text-lg">Our AI delivers two complementary reports tailored to different policy analysis needs</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">Two-Tier Review for Complete Policy Clarity</h2>
+                <p className="text-gray-600 text-lg">Our AI delivers two complementary reports tailored to different policy review needs</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
