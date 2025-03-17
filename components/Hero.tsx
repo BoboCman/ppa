@@ -284,7 +284,7 @@ export const Hero: FC = () => {
                       "Perfect for initial assessment",
                       "Core Policy Highlights",
                     ],
-                    sample: "sample_reports/SAMPLE_CLIENT_SUMMARY.pdf",
+                    sample: "sample_reports/Policy Snapshot Report_SAMPLE.pdf",
                   },
                   {
                     title: "Policy Analysis Report",
@@ -295,7 +295,7 @@ export const Hero: FC = () => {
                       "Risk Mitigation Strategies",
                       "Ideal for advisor consultations",
                     ],
-                    sample: "sample_reports/SAMPLE_POLICY_REVIEW.pdf",
+                    sample: "sample_reports/Policy Analysis Report_SAMPLE.pdf",
                   },
                 ].map((item, index) => (
                   <Card
