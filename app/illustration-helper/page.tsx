@@ -267,7 +267,7 @@ export default function IllustrationHelper() {
                   Why an Illustration Is Needed
                 </h3>
                 <p className="text-gray-600 text-lg leading-relaxed max-w-3xl text-center">
-                  An illustration shows exactly how a policy is performing and what to expect in the future. It's the
+                  An illustration shows exactly how a policy is performing and what to expect in the future. It is the
                   key document needed for a thorough policy review.
                 </p>
                 <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
