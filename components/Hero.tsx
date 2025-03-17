@@ -276,7 +276,7 @@ export const Hero: FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "Policy Snapshot",
+                    title: "Policy Snapshot Report",
                     features: [
                       "Policy Overview & Structure",
                       "Protection Features & Benefits",
