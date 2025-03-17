@@ -154,10 +154,10 @@ export default function UploadPage() {
           {/* Header */}
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4B6FEE] to-[#3B4FDE]">
-              Ready to Analyze Your Policy?
+              Ready to Analyze a Policy?
             </h1>
             <p className="text-lg text-gray-600 font-medium">
-              Just 2 quick steps to get your Insurance Planner AI analysis package
+              Just 2 quick steps to get an Insurance Planner AI analysis package
             </p>
           </div>
 
@@ -196,7 +196,7 @@ export default function UploadPage() {
                 <span className={cn("block font-semibold", step === 2 ? "text-[#4B6FEE]" : "text-gray-400")}>
                   Next, enter email
                 </span>
-                <span className="block text-sm text-gray-500">Get your analysis</span>
+                <span className="block text-sm text-gray-500">Get an analysis</span>
               </div>
             </div>
           </div>
@@ -335,7 +335,7 @@ export default function UploadPage() {
                             Processing...
                           </span>
                         ) : (
-                          "Get My Analysis"
+                          "Get Analysis"
                         )}
                       </Button>
                     </div>
