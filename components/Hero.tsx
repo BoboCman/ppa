@@ -276,7 +276,7 @@ export const Hero: FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "Essential Policy Snapshot",
+                    title: "Policy Snapshot",
                     features: [
                       "Policy Overview & Structure",
                       "Protection Features & Benefits",
@@ -287,7 +287,7 @@ export const Hero: FC = () => {
                     sample: "sample_reports/SAMPLE_CLIENT_SUMMARY.pdf",
                   },
                   {
-                    title: "Strategic Policy Intelligence",
+                    title: "Policy Analysis Report",
                     features: [
                       "In-depth Feature Assessment",
                       "Hidden Gems & Blind Spots",
@@ -344,7 +344,7 @@ export const Hero: FC = () => {
                   <div className="rounded-full bg-white/10 p-2 transition-transform duration-300 group-hover:scale-110">
                     <Zap className="w-8 h-8" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold">Get Insurance Planner AI Analysis Now</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">Get an Insurance Planner AI Analysis Now</h2>
                 </div>
                 <p className="text-xl text-blue-100">From Policy Confusion to Peace of Mind in Minutes</p>
               </CardHeader>
@@ -355,7 +355,7 @@ export const Hero: FC = () => {
                   className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-white"
                 >
                   <span className="flex items-center gap-2">
-                    Get a Free Policy Snapshot
+                    Analyze My Policy
                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Button>
