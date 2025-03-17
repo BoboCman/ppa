@@ -154,7 +154,7 @@ export default function UploadPage() {
           {/* Header */}
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4B6FEE] to-[#3B4FDE]">
-              Ready to Analyze a Policy?
+              Ready to Review a Policy?
             </h1>
             <p className="text-lg text-gray-600 font-medium">
               Just 2 quick steps to get an Insurance Planner AI analysis package
