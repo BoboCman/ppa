@@ -12,7 +12,7 @@ export function Footer() {
               Insurance Planner AI
             </h3>
             <p className="text-text-light text-sm md:text-base">
-              AI-driven automation by Financial Planner AI, LLC.
+              A premium policy review service by Financial Planner AI, LLC
             </p>
           </div>
           {/* Quick Links */}
