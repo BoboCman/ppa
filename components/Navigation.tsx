@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, Upload } from 'lucide-react'
+import { Menu, X, Upload } from "lucide-react"
 import { Logo } from "@/components/Logo"
 
 export default function Navigation() {
@@ -16,10 +16,13 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "Why Review?" },
-    { href: "/services", label: "Services" },
+    { href: "mailto:support@financialplanner-ai.com", label: "Contact" },
   ]
 
-  const isActivePath = (path: string) => pathname === path
+  const isActivePath = (path: string) => {
+    if (path.startsWith("mailto:")) return false
+    return pathname === path
+  }
 
   return (
     <>
@@ -106,3 +109,4 @@ export default function Navigation() {
     </>
   )
 }
+
