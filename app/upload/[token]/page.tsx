@@ -309,7 +309,7 @@ export default function UploadPage() {
                     <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-lg text-sm text-gray-600">
                       <span className="text-[#4B6FEE] mt-0.5">ⓘ</span>
                       <p>
-                        Your analysis will be sent to this email within minutes. Please check your spam folder if not
+                        The Insurance Planner AI analysis package will be sent to this email within minutes. Please check your spam folder if not
                         received.
                       </p>
                     </div>
@@ -335,7 +335,7 @@ export default function UploadPage() {
                             Processing...
                           </span>
                         ) : (
-                          "Get Analysis"
+                          "Get My Analysis"
                         )}
                       </Button>
                     </div>
