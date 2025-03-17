@@ -121,8 +121,8 @@ export const Hero: FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">Rapid Automated Policy Review</h2>
-              <p className="text-gray-600 text-lg">From complex document to clear insights in moments</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">Rapid AI-Powered Policy Review</h2>
+              <p className="text-gray-600 text-lg">From complex document to clear insights in minutes</p>
             </div>
 
             <div className="relative">
