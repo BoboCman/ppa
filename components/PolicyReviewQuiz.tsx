@@ -124,9 +124,10 @@ const PolicyReviewQuiz = () => {
           <div className="space-y-6">
             <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
               <span className="flex items-center gap-2">
-                \
-                {questions[currentQuestion].icon &&
-                  <questions[currentQuestion].icon className="w-4 h-4 text-[#4B6FEE]" />}
+                {(() => {
+                  const Icon = questions[currentQuestion].icon
+                  return <Icon className="w-4 h-4 text-[#4B6FEE]" />
+                })()}
                 <span>{questions[currentQuestion].category}</span>
               </span>
               <span className="flex items-center gap-1">
