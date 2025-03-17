@@ -53,7 +53,7 @@ export const Hero: FC = () => {
               </span>
             </h1>
             <h2 className="text-xl md:text-3xl mb-12 text-gray-600 font-light">
-              Turn Policy Details into Clear Insights
+              Turn Complex Policy Details into Clear Insights
               <br className="hidden md:block" />
               with Smart AI Technology
             </h2>
