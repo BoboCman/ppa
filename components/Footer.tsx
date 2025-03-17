@@ -39,10 +39,9 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/resources" 
+                  href="" 
                   className="text-text-light hover:text-text block py-2 md:py-0"
                 >
-                  Contact
                 </Link>
               </li>
             </ul>
