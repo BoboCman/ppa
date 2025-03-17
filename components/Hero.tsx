@@ -269,7 +269,7 @@ export const Hero: FC = () => {
             {/* Sample Reports */}
             <div>
               <div className="text-center mb-12 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">What You'll Receive</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">What You&apos;ll Receive</h2>
                 <p className="text-gray-600 text-lg">Our AI Analysis Package two reports tailored to policy needs</p>
               </div>
 
