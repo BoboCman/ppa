@@ -240,7 +240,7 @@ const AboutPage: FC = () => {
                   <div className="rounded-full bg-white/10 p-2 transition-transform duration-300 group-hover:scale-110">
                     <Zap className="w-8 h-8" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold">Ready for AI-Powered Policy Insights?</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">Ready for AI-Powered Policy Review?</h2>
                 </div>
                 <p className="text-xl text-blue-100">Upload any in-force illustration and receive analysis reports within minutes</p>
               </CardHeader>
@@ -251,7 +251,7 @@ const AboutPage: FC = () => {
                   className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <Link href="/upload" className="flex items-center gap-2">
-                    Analyze Now
+                    Start Policy Review
                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </Button>
