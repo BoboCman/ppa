@@ -53,7 +53,7 @@ export const Hero: FC = () => {
               </span>
             </h1>
             <h2 className="text-xl md:text-3xl mb-12 text-gray-600 font-light">
-              Turn Policy Details into Clear Answers
+              Turn Policy Details into Clear Insights
               <br className="hidden md:block" />
               with Smart AI Technology
             </h2>
@@ -344,9 +344,9 @@ export const Hero: FC = () => {
                   <div className="rounded-full bg-white/10 p-2 transition-transform duration-300 group-hover:scale-110">
                     <Zap className="w-8 h-8" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold">Ready to Get an Insurance Planner AI Analysis Now?</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">Ready for Instant Policy Insights?</h2>
                 </div>
-                <p className="text-xl text-blue-100">Upload an in-force illustration and receive both reports within minutes</p>
+                <p className="text-xl text-blue-100">Upload the illustration and receive both analysis reports within minutes.</p>
               </CardHeader>
               <CardContent className="flex justify-center p-8 bg-gradient-to-b from-white to-blue-50/30">
                 <Button
@@ -355,7 +355,7 @@ export const Hero: FC = () => {
                   className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-white"
                 >
                   <span className="flex items-center gap-2">
-                    Analyze Policy Now
+                    Analyze Now
                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Button>
