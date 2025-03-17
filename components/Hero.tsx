@@ -43,9 +43,9 @@ export const Hero: FC = () => {
               id="hero-title"
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#4B6FEE] mb-4 tracking-tight flex flex-col items-center"
             >
-              <span className="mb-2">AI-Powered Analysis</span>
+              <span className="mb-2">Life Insurance</span>
               <span className="flex items-center gap-2">
-                <span className="text-3xl md:text-5xl lg:text-6xl opacity-90">+ Human Expertise</span>
+                <span className="text-3xl md:text-5xl lg:text-6xl opacity-90">Policy Reviews</span>
                 <span className="bg-gradient-to-r from-[#4B6FEE] to-blue-500 text-white text-lg md:text-xl lg:text-2xl px-4 py-2 rounded-full shadow-md font-semibold relative overflow-hidden">
                   <span className="relative z-10">in minutes</span>
                   <span className="absolute inset-0 bg-white opacity-20 transform -skew-x-12"></span>
@@ -53,7 +53,9 @@ export const Hero: FC = () => {
               </span>
             </h1>
             <h2 className="text-xl md:text-3xl mb-12 text-gray-600 font-light">
-              Transform your life insurance from confusion to confidence in minutes
+              Turn Policy Details into Clear Answers
+              <br className="hidden md:block" />
+              with Smart AI Technology
             </h2>
             <Card className="w-full bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border-blue-100">
               <CardContent className="p-8">
@@ -61,36 +63,30 @@ export const Hero: FC = () => {
                   <div className="rounded-full bg-blue-50 p-3">
                     <Zap className="w-8 h-8 text-[#4B6FEE]" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#4B6FEE]">
-                    From Policy Confusion to Confident Decisions in Minutes
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#4B6FEE] text-center">
+                    The Next Generation of Insurance Policy Analysis
                   </h3>
-                  <div className="flex flex-col items-center space-y-4 text-gray-700 text-lg leading-relaxed max-w-3xl">
+                  <p className="text-gray-600 text-lg leading-relaxed max-w-3xl text-center">
+                    Get clarity on life insurance policies instantly – our AI transforms complex insurance documents
+                    into clear insights that policyholders and advisors can act on.
+                  </p>
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-700 font-medium w-full">
                     <div className="flex items-center">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-2" aria-hidden="true" />
-                      <span>Upload your policy for AI analysis</span>
+                      <span>Reliable AI Analysis</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-2" aria-hidden="true" />
-                      <span>Consult with an independent expert</span>
+                      <span>Quick, Clear Results</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-2" aria-hidden="true" />
-                      <span>Make informed decisions: keep, surrender, or repurpose</span>
+                      <span>Expert-Level Analysis</span>
                     </div>
                   </div>
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-700 font-medium">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-2" aria-hidden="true" />
-                      <span>AI-Powered Analysis</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-2" aria-hidden="true" />
-                      <span>Expert Human Consultation</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-2" aria-hidden="true" />
-                      <span>Clear Action Steps</span>
-                    </div>
+                  <div className="flex items-center text-[#4B6FEE] font-bold text-lg">
+                    <UploadIcon className="w-6 h-6 mr-2" aria-hidden="true" />
+                    <span>Simply upload any in-force illustration and let our AI handle the rest</span>
                   </div>
                   <div className="mt-4 flex flex-col md:flex-row items-center gap-4">
                     <Button
@@ -98,7 +94,7 @@ export const Hero: FC = () => {
                       className="bg-[#4B6FEE] hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
                     >
                       <span className="flex items-center gap-2">
-                        Upload Your Policy
+                        Upload a Policy
                         <UploadIcon className="w-5 h-5" />
                       </span>
                     </Button>
@@ -133,8 +129,8 @@ export const Hero: FC = () => {
               <div className="grid md:grid-cols-3 gap-8 relative z-10">
                 {[
                   {
-                    title: "Upload Your Policy",
-                    description: "Simply upload your policy illustration and provide your email. That is all we need.",
+                    title: "Upload a Policy",
+                    description: "Simply upload a policy illustration and provide an email. That is all we need.",
                     icon: <UploadIcon className="w-6 h-6" />,
                     link: {
                       text: "Need help getting an illustration?",
@@ -143,12 +139,12 @@ export const Hero: FC = () => {
                   },
                   {
                     title: "AI Analysis",
-                    description: "Insurance Planner AI analyzes your illustration to identify key policy details",
+                    description: "Insurance Planner AI analyzes the illustration to identify key policy details",
                     icon: <Brain className="w-6 h-6" />,
                   },
                   {
                     title: "Quick Results",
-                    description: "Receive a clear summary and detailed PDF report to your inbox in minutes",
+                    description: "Receive a clear summary and detailed PDF report to an inbox in minutes",
                     icon: <Inbox className="w-6 h-6" />,
                   },
                 ].map((item, index) => (
@@ -205,34 +201,34 @@ export const Hero: FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16 space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">What Our AI Analysis Reveals</h2>
-              <p className="text-gray-600 text-lg">Comprehensive insights for you and your advisor</p>
+              <p className="text-gray-600 text-lg">Comprehensive insights for policyholders and advisors</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
                   icon: <Shield className="h-8 w-8" />,
-                  title: "Protection Confidence",
+                  title: "Protection Assessment",
                   description:
-                    "Understand exactly how your coverage aligns with your family's needs and get clarity on your policy's true protection power",
+                    "Clear understanding of how coverage aligns with financial protection needs and visibility into the policy's true protection capabilities",
                 },
                 {
                   icon: <Sparkles className="h-8 w-8" />,
-                  title: "Premium Strategy",
+                  title: "Premium Optimization",
                   description:
-                    "See if your premium structure is optimized and learn how to maintain your coverage efficiently over time",
+                    "Analysis of premium structure efficiency and strategies for maintaining coverage effectively over time",
                 },
                 {
                   icon: <TrendingUp className="h-8 w-8" />,
-                  title: "Growth Analysis",
+                  title: "Growth Potential",
                   description:
-                    "Get clear insights into your policy&apos;s accumulation potential and understand your options for accessing benefits",
+                    "Detailed insights into the policy's accumulation potential and options for accessing available benefits",
                 },
                 {
                   icon: <Lock className="h-8 w-8" />,
-                  title: "Policy Security",
+                  title: "Policy Longevity",
                   description:
-                    "Review your policy guarantees and discover strategies to keep your coverage strong for the long term",
+                    "Evaluation of policy guarantees and recommendations for ensuring strong, sustainable coverage for the long term",
                 },
               ].map((item, index) => (
                 <Card
@@ -273,29 +269,31 @@ export const Hero: FC = () => {
             {/* Sample Reports */}
             <div>
               <div className="text-center mb-12 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">Your AI Analysis Package</h2>
-                <p className="text-gray-600 text-lg">Comprehensive reports tailored to your needs</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">AI Analysis Package</h2>
+                <p className="text-gray-600 text-lg">Comprehensive insights tailored to policy needs</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "Clear Email Summary",
+                    title: "Essential Policy Snapshot",
                     features: [
                       "Policy Overview & Structure",
                       "Protection Features & Benefits",
-                      "Built-in Policy Advantages",
-                      "Critical Management Points",
+                      "Key Policy Metrics",
+                      "Perfect for initial assessment",
+                      "Core Policy Highlights",
                     ],
                     sample: "sample_reports/SAMPLE_CLIENT_SUMMARY.pdf",
                   },
                   {
-                    title: "Expert PDF Report",
+                    title: "Strategic Policy Intelligence",
                     features: [
-                      "Comprehensive Policy Analysis",
-                      "Detailed Feature Assessment",
-                      "Risk & Opportunity Insights",
-                      "Advisor Discussion Topics",
+                      "In-depth Feature Assessment",
+                      "Hidden Gems & Blind Spots",
+                      "Performance Trajectory Analysis",
+                      "Risk Mitigation Strategies",
+                      "Ideal for advisor consultations",
                     ],
                     sample: "sample_reports/SAMPLE_POLICY_REVIEW.pdf",
                   },
@@ -346,7 +344,7 @@ export const Hero: FC = () => {
                   <div className="rounded-full bg-white/10 p-2 transition-transform duration-300 group-hover:scale-110">
                     <Zap className="w-8 h-8" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold">Get Your Insurance Planner AI Analysis Now</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">Get Insurance Planner AI Analysis Now</h2>
                 </div>
                 <p className="text-xl text-blue-100">From Policy Confusion to Peace of Mind in Minutes</p>
               </CardHeader>
@@ -357,7 +355,7 @@ export const Hero: FC = () => {
                   className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-white"
                 >
                   <span className="flex items-center gap-2">
-                    Start My Free AI Analysis
+                    Get a Free Policy Snapshot
                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Button>
@@ -371,3 +369,4 @@ export const Hero: FC = () => {
 }
 
 export default Hero
+
