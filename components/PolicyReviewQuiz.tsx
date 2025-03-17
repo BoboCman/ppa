@@ -96,7 +96,7 @@ const PolicyReviewQuiz = () => {
         title: "Policy Review Recommended",
         description:
           "Based on your responses, a policy review would be beneficial. Our AI can quickly analyze policy details and identify potential opportunities for improvement.",
-        buttonText: "Analyze My Policy Now",
+        buttonText: "Analyze Policy Now",
         buttonAction: () => router.push("/upload"),
         urgency: "medium",
       }
