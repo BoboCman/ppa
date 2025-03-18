@@ -33,6 +33,7 @@ export default function PricingPage() {
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
                 <p className="text-gray-600 font-medium">Basic policy overview</p>
+                <p className="text-gray-600 text-sm mb-4">Perfect for initial assessment</p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
                 <ul className="space-y-4">
@@ -59,7 +60,7 @@ export default function PricingPage() {
             {/* Premium Tier */}
             <Card className="shadow-xl border-[#4B6FEE] hover:-translate-y-2 transition-all duration-300 bg-white relative flex flex-col z-10 overflow-hidden">
               <div className="absolute top-0 inset-x-0 h-1.5 bg-[#4B6FEE] rounded-t-lg"></div>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#4B6FEE] text-white text-sm font-semibold py-1 px-4 rounded-full shadow-md">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#4B6FEE] text-white text-sm font-semibold py-1 px-4 rounded-full shadow-md z-20">
                 Most Popular
               </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/70 rounded-bl-full z-0"></div>
@@ -67,14 +68,14 @@ export default function PricingPage() {
                 <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
                   <Shield className="w-7 h-7 text-[#4B6FEE]" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Policy Snapshot +</h2>
-                <h3 className="text-xl font-semibold text-gray-700 mb-2">Comprehensive Analysis</h3>
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">Full Policy Review</h2>
                 <div className="mb-2 flex items-baseline">
                   <span className="text-3xl font-bold text-[#4B6FEE]">$49</span>
                   <span className="text-gray-600 ml-1">per policy</span>
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
-                <p className="text-gray-600 font-medium">Complete analysis with recommendations</p>
+                <p className="text-gray-600 font-medium">Comprehensive analysis with</p>
+                <p className="text-gray-600 font-medium mb-4">detailed recommendations</p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
                 <ul className="space-y-4">
@@ -111,13 +112,13 @@ export default function PricingPage() {
                 <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
                   <Users className="w-7 h-7 text-[#4B6FEE]" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Enterprise Policy</h2>
-                <h3 className="text-xl font-semibold text-gray-700 mb-2">Intelligence</h3>
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">Enterprise Policy Intelligence</h2>
                 <div className="mb-2">
                   <span className="text-3xl font-bold text-[#4B6FEE]">Custom</span>
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
-                <p className="text-gray-600 font-medium">Professional dashboard for financial advisors</p>
+                <p className="text-gray-600 font-medium">Professional dashboard for financial</p>
+                <p className="text-gray-600 font-medium mb-4">advisors</p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
                 <ul className="space-y-4">
@@ -151,145 +152,263 @@ export default function PricingPage() {
           {/* Feature Comparison Table */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-[#4B6FEE] mb-8 text-center">Feature Comparison</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
+            <div className="overflow-x-auto rounded-xl shadow-md">
+              <table className="w-full border-collapse bg-white">
                 <thead>
-                  <tr className="bg-blue-50">
-                    <th className="py-4 px-6 text-left text-gray-700 font-semibold border-b border-blue-100 min-w-[200px]">
+                  <tr className="bg-[#4B6FEE]/10">
+                    <th className="py-5 px-6 text-left text-gray-700 font-bold border-b border-blue-100 min-w-[200px] text-lg">
                       Feature
                     </th>
-                    <th className="py-4 px-6 text-center text-gray-700 font-semibold border-b border-blue-100 min-w-[150px]">
+                    <th className="py-5 px-6 text-center text-gray-700 font-bold border-b border-blue-100 min-w-[150px] text-lg">
                       QuickScan
-                      <br />
-                      (Free)
+                      <div className="text-sm font-medium text-gray-500">(Free)</div>
                     </th>
-                    <th className="py-4 px-6 text-center text-gray-700 font-semibold border-b border-blue-100 min-w-[150px]">
-                      Snapshot + Analysis
-                      <br />
-                      ($49)
+                    <th className="py-5 px-6 text-center text-gray-700 font-bold border-b border-blue-100 min-w-[150px] text-lg">
+                      Full Policy Review
+                      <div className="text-sm font-medium text-gray-500">($49)</div>
                     </th>
-                    <th className="py-4 px-6 text-center text-gray-700 font-semibold border-b border-blue-100 min-w-[150px]">
+                    <th className="py-5 px-6 text-center text-gray-700 font-bold border-b border-blue-100 min-w-[150px] text-lg">
                       Enterprise
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {/* Policy Analysis */}
-                  <tr className="bg-blue-50/50">
-                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                  <tr className="bg-[#4B6FEE]/10">
+                    <td colSpan={4} className="py-4 px-6 font-bold text-[#4B6FEE] text-lg border-t border-blue-100">
                       Policy Analysis
                     </td>
                   </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Policy Overview</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Basic</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Death Benefit Analysis</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Basic</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Detailed</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Detailed</td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Premium Structure</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Summary</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Full Analysis</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Full Analysis</td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Policy Mechanics</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Policy Overview</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
+                        Basic
+                      </span>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Comprehensive
+                      </span>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Comprehensive
+                      </span>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Death Benefit Analysis</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
+                        Basic
+                      </span>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Detailed
+                      </span>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Detailed
+                      </span>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Premium Structure</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
+                        Summary
+                      </span>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Full Analysis
+                      </span>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Full Analysis
+                      </span>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Policy Mechanics</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
                   </tr>
 
                   {/* Detailed Insights */}
-                  <tr className="bg-blue-50/50">
-                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                  <tr className="bg-[#4B6FEE]/10">
+                    <td colSpan={4} className="py-4 px-6 font-bold text-[#4B6FEE] text-lg border-t border-blue-100">
                       Detailed Insights
                     </td>
                   </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Protection Strategy</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Protection Strategy</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Premium Optimization</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Cash Value Growth</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
                   </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Rider Benefits</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Premium Optimization</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Cash Value Growth</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Rider Benefits</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
                   </tr>
 
                   {/* Deliverables */}
-                  <tr className="bg-blue-50/50">
-                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                  <tr className="bg-[#4B6FEE]/10">
+                    <td colSpan={4} className="py-4 px-6 font-bold text-[#4B6FEE] text-lg border-t border-blue-100">
                       Deliverables
                     </td>
                   </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Email Summary</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Basic</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">PDF Report</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Email Summary</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
+                        Basic
+                      </span>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Complete</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">Complete</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Comprehensive
+                      </span>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Comprehensive
+                      </span>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">PDF Report</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Complete
+                      </span>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-[#4B6FEE] text-sm font-medium">
+                        Complete
+                      </span>
+                    </td>
                   </tr>
 
                   {/* Enterprise Dashboard */}
-                  <tr className="bg-blue-50/50">
-                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                  <tr className="bg-[#4B6FEE]/10">
+                    <td colSpan={4} className="py-4 px-6 font-bold text-[#4B6FEE] text-lg border-t border-blue-100">
                       Enterprise Dashboard
                     </td>
                   </tr>
@@ -305,84 +424,170 @@ export default function PricingPage() {
                     "One-Click Client Reporting",
                     "Direct Client Email Sharing",
                   ].map((feature, index) => (
-                    <tr key={feature} className={index % 2 === 0 ? "bg-gray-50" : ""}>
-                      <td className="py-3 px-6 border-t border-gray-200">{feature}</td>
-                      <td className="py-3 px-6 text-center border-t border-gray-200">
-                        <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    <tr
+                      key={feature}
+                      className={`${index % 2 === 0 ? "bg-gray-50" : ""} hover:bg-blue-50/30 transition-colors duration-150`}
+                    >
+                      <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">
+                        <div className="flex items-center">
+                          <span className="text-gray-700">{feature}</span>
+                        </div>
                       </td>
-                      <td className="py-3 px-6 text-center border-t border-gray-200">
-                        <X className="h-5 w-5 text-gray-400 mx-auto" />
+                      <td className="py-4 px-6 text-center border-t border-gray-200">
+                        <div className="flex justify-center">
+                          <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                            <X className="h-5 w-5 text-red-400" />
+                          </div>
+                        </div>
                       </td>
-                      <td className="py-3 px-6 text-center border-t border-gray-200">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                      <td className="py-4 px-6 text-center border-t border-gray-200">
+                        <div className="flex justify-center">
+                          <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                            <X className="h-5 w-5 text-red-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="py-4 px-6 text-center border-t border-gray-200">
+                        <div className="flex justify-center">
+                          <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                            <Check className="h-5 w-5 text-green-500" />
+                          </div>
+                        </div>
                       </td>
                     </tr>
                   ))}
 
                   {/* Support & Access */}
-                  <tr className="bg-blue-50/50">
-                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                  <tr className="bg-[#4B6FEE]/10">
+                    <td colSpan={4} className="py-4 px-6 font-bold text-[#4B6FEE] text-lg border-t border-blue-100">
                       Support & Access
                     </td>
                   </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Email Assistance</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Email Assistance</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Dedicated Account Manager</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Multiple Advisor Accounts</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
-                    </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
                   </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">30-Day Unlimited Reviews</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Dedicated Account Manager</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
                   </tr>
-                  <tr className="even:bg-gray-50">
-                    <td className="py-3 px-6 border-t border-gray-200">Priority Response</td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Multiple Advisor Accounts</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
                     </td>
-                    <td className="py-3 px-6 text-center border-t border-gray-200">
-                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">30-Day Unlimited Reviews</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Priority Response</td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <X className="h-5 w-5 text-red-400" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center border-t border-gray-200">
+                      <div className="flex justify-center">
+                        <div className="rounded-full bg-green-50 p-1 w-8 h-8 flex items-center justify-center">
+                          <Check className="h-5 w-5 text-green-500" />
+                        </div>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
