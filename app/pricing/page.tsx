@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Check, CheckCircle, X, Zap, Shield, Users } from "lucide-react"
+import { Check, CheckCircle, X, Zap, Shield, Users, FileText, Sparkles, ArrowRight } from "lucide-react"
 
 export default function PricingPage() {
   return (
@@ -10,10 +10,10 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#4B6FEE] tracking-tight">
               Choose Your Insurance Policy Analysis Option
             </h1>
-            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
               Our AI transforms complex insurance illustrations into clear insights.
             </p>
           </div>
@@ -21,31 +21,35 @@ export default function PricingPage() {
           {/* Pricing Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Free Tier */}
-            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white flex flex-col">
-              <CardHeader className="pb-0">
+            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white flex flex-col relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full z-0"></div>
+              <CardHeader className="pb-0 relative z-10">
                 <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
                   <Zap className="w-7 h-7 text-[#4B6FEE]" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800">Policy QuickScan</h2>
-                <div className="mt-2 mb-1">
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">Policy QuickScan</h2>
+                <div className="mb-2">
                   <span className="text-3xl font-bold text-[#4B6FEE]">FREE</span>
                 </div>
-                <p className="text-gray-600">Basic policy overview</p>
+                <div className="h-px w-full bg-gray-100 my-4"></div>
+                <p className="text-gray-600 font-medium">Basic policy overview</p>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <ul className="space-y-3 mt-4">
+              <CardContent className="flex-grow pt-6 pb-8 px-6">
+                <ul className="space-y-4">
                   {["Policy basics & structure", "Death benefit summary", "Key considerations"].map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
+                    <li key={feature} className="flex items-start gap-3 group">
+                      <div className="flex-shrink-0 rounded-full p-1 bg-green-50">
+                        <CheckCircle className="h-5 w-5 text-green-500" />
+                      </div>
+                      <span className="text-gray-700 group-hover:text-gray-900 transition-colors">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="pt-0 pb-6 px-6">
                 <Button
                   asChild
-                  className="w-full bg-[#4B6FEE] hover:bg-blue-700 text-white rounded-full py-6 transition-all duration-300 hover:scale-105"
+                  className="w-full bg-[#4B6FEE] hover:bg-blue-700 text-white rounded-full py-5 text-base font-semibold transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
                 >
                   <Link href="/upload">Get Free QuickScan</Link>
                 </Button>
@@ -53,24 +57,27 @@ export default function PricingPage() {
             </Card>
 
             {/* Premium Tier */}
-            <Card className="shadow-xl border-[#4B6FEE] hover:-translate-y-2 transition-all duration-300 bg-white relative flex flex-col">
-              <div className="absolute top-0 inset-x-0 h-2 bg-[#4B6FEE] rounded-t-lg"></div>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#4B6FEE] text-white text-sm font-semibold py-1 px-4 rounded-full">
+            <Card className="shadow-xl border-[#4B6FEE] hover:-translate-y-2 transition-all duration-300 bg-white relative flex flex-col z-10 overflow-hidden">
+              <div className="absolute top-0 inset-x-0 h-1.5 bg-[#4B6FEE] rounded-t-lg"></div>
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#4B6FEE] text-white text-sm font-semibold py-1 px-4 rounded-full shadow-md">
                 Most Popular
               </div>
-              <CardHeader className="pb-0 pt-8">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/70 rounded-bl-full z-0"></div>
+              <CardHeader className="pb-0 pt-8 relative z-10">
                 <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
                   <Shield className="w-7 h-7 text-[#4B6FEE]" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800">Policy Snapshot + Comprehensive Analysis</h2>
-                <div className="mt-2 mb-1">
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">Policy Snapshot +</h2>
+                <h3 className="text-xl font-semibold text-gray-700 mb-2">Comprehensive Analysis</h3>
+                <div className="mb-2 flex items-baseline">
                   <span className="text-3xl font-bold text-[#4B6FEE]">$49</span>
                   <span className="text-gray-600 ml-1">per policy</span>
                 </div>
-                <p className="text-gray-600">Complete analysis with recommendations</p>
+                <div className="h-px w-full bg-gray-100 my-4"></div>
+                <p className="text-gray-600 font-medium">Complete analysis with recommendations</p>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <ul className="space-y-3 mt-4">
+              <CardContent className="flex-grow pt-6 pb-8 px-6">
+                <ul className="space-y-4">
                   {[
                     "Email summary highlights",
                     "Detailed PDF report",
@@ -78,17 +85,19 @@ export default function PricingPage() {
                     "Cash value & rider evaluation",
                     "Policy strategies & recommendations",
                   ].map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
+                    <li key={feature} className="flex items-start gap-3 group">
+                      <div className="flex-shrink-0 rounded-full p-1 bg-green-50 transition-colors duration-300 group-hover:bg-green-100">
+                        <CheckCircle className="h-5 w-5 text-green-500" />
+                      </div>
+                      <span className="text-gray-700 group-hover:text-gray-900 transition-colors">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="pt-0 pb-6 px-6">
                 <Button
                   asChild
-                  className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full py-6 transition-all duration-300 hover:scale-105"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full py-5 text-base font-semibold transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
                 >
                   <Link href="/upload">Analyze My Policy Now</Link>
                 </Button>
@@ -96,19 +105,22 @@ export default function PricingPage() {
             </Card>
 
             {/* Enterprise Tier */}
-            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white flex flex-col">
-              <CardHeader className="pb-0">
+            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white flex flex-col relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full z-0"></div>
+              <CardHeader className="pb-0 relative z-10">
                 <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
                   <Users className="w-7 h-7 text-[#4B6FEE]" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800">Enterprise Policy Intelligence</h2>
-                <div className="mt-2 mb-1">
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">Enterprise Policy</h2>
+                <h3 className="text-xl font-semibold text-gray-700 mb-2">Intelligence</h3>
+                <div className="mb-2">
                   <span className="text-3xl font-bold text-[#4B6FEE]">Custom</span>
                 </div>
-                <p className="text-gray-600">Professional dashboard for financial advisors</p>
+                <div className="h-px w-full bg-gray-100 my-4"></div>
+                <p className="text-gray-600 font-medium">Professional dashboard for financial advisors</p>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <ul className="space-y-3 mt-4">
+              <CardContent className="flex-grow pt-6 pb-8 px-6">
+                <ul className="space-y-4">
                   {[
                     "AI-powered analysis dashboard",
                     "Client-ready visual interface",
@@ -116,17 +128,19 @@ export default function PricingPage() {
                     "One-click client reporting",
                     "Unlimited reviews (30 days)",
                   ].map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
+                    <li key={feature} className="flex items-start gap-3 group">
+                      <div className="flex-shrink-0 rounded-full p-1 bg-green-50 transition-colors duration-300 group-hover:bg-green-100">
+                        <CheckCircle className="h-5 w-5 text-green-500" />
+                      </div>
+                      <span className="text-gray-700 group-hover:text-gray-900 transition-colors">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="pt-0 pb-6 px-6">
                 <Button
                   asChild
-                  className="w-full bg-[#4B6FEE] hover:bg-blue-700 text-white rounded-full py-6 transition-all duration-300 hover:scale-105"
+                  className="w-full bg-[#4B6FEE] hover:bg-blue-700 text-white rounded-full py-5 text-base font-semibold transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
                 >
                   <Link href="mailto:enterprise@financialplanner-ai.com">Contact Our Team</Link>
                 </Button>
@@ -377,52 +391,94 @@ export default function PricingPage() {
           </div>
 
           {/* Supporting Content */}
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
+          <div className="bg-white rounded-xl shadow-lg p-12 border border-blue-100 mb-16">
             <h2 className="text-3xl font-bold text-[#4B6FEE] mb-6 text-center">
               The Future of Life Insurance Policy Reviews Is Here
             </h2>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">AI-Powered Insights, Human-Guided Decisions</h3>
-              <blockquote className="border-l-4 border-[#4B6FEE] pl-4 py-2 italic text-gray-700 my-4">
-                &quot;Smart technology doing the heavy lifting. Smart humans making the decisions.&quot;
-              </blockquote>
+            <h3 className="text-xl font-semibold text-gray-800 mb-6 text-center">
+              AI-Powered Insights, Human-Guided Decisions
+            </h3>
+
+            <blockquote className="border-l-4 border-[#4B6FEE] pl-6 py-4 italic text-gray-700 my-8 bg-blue-50/30 rounded-r-lg pr-6">
+              &quot;Smart technology doing the heavy lifting. Smart humans making the decisions.&quot;
+            </blockquote>
+
+            <p className="text-gray-600 max-w-4xl mx-auto mb-10 text-center">
+              At Insurance Planner AI, we&apos;ve revolutionized how life insurance policies are analyzed and
+              understood. Our digital-first approach combines cutting-edge artificial intelligence with intuitive design
+              to deliver clarity where complexity once reigned.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-800 mb-6">Why Insurance Planner AI Is Different</h3>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <Card className="shadow-md hover:shadow-lg transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white">
+                <CardContent className="p-6">
+                  <div className="rounded-full bg-blue-50 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                    <Zap className="w-6 h-6 text-[#4B6FEE]" />
+                  </div>
+                  <h4 className="font-bold text-[#4B6FEE] text-lg mb-3">Speed Without Sacrifice</h4>
+                  <p className="text-gray-600">
+                    What once took days or weeks now happens in minutes. Our AI analyzes complex policy documents
+                    instantly, without sacrificing depth or accuracy.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-md hover:shadow-lg transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white">
+                <CardContent className="p-6">
+                  <div className="rounded-full bg-blue-50 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                    <FileText className="w-6 h-6 text-[#4B6FEE]" />
+                  </div>
+                  <h4 className="font-bold text-[#4B6FEE] text-lg mb-3">Clarity Through Technology</h4>
+                  <p className="text-gray-600">
+                    We translate insurance jargon into straightforward insights that empower policyholders and advisors
+                    to make informed decisions with confidence.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-md hover:shadow-lg transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white">
+                <CardContent className="p-6">
+                  <div className="rounded-full bg-blue-50 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                    <Sparkles className="w-6 h-6 text-[#4B6FEE]" />
+                  </div>
+                  <h4 className="font-bold text-[#4B6FEE] text-lg mb-3">Complete Flexibility</h4>
+                  <p className="text-gray-600">
+                    Whether you&apos;re reviewing a single policy or managing hundreds of clients, our platform scales
+                    to your needs with options for individuals and financial professionals alike.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Why We&apos;re Different:</h3>
+            <div className="h-px w-full bg-gray-200 my-8"></div>
 
-              <div className="grid md:grid-cols-3 gap-6 mt-4">
-                <div className="space-y-2">
-                  <h4 className="font-bold text-[#4B6FEE]">Speed</h4>
-                  <p className="text-gray-600">Minutes instead of days</p>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-bold text-[#4B6FEE]">Clarity</h4>
-                  <p className="text-gray-600">Plain language insights</p>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-bold text-[#4B6FEE]">Flexibility</h4>
-                  <p className="text-gray-600">From individuals to enterprises</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-8 text-center">
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                Our platform enhances human judgment by automating complex analysis, freeing you to focus on what
-                matters most.
+            <div className="mb-10">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                The Perfect Balance of Technology and Human Expertise
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Our platform doesn&apos;t replace human judgment—it enhances it. By automating the complex work of
+                policy analysis, we free you to focus on what matters most: making smart decisions about your financial
+                future or providing valuable guidance to your clients.
+              </p>
+              <p className="text-gray-600">
+                Experience the difference that AI-powered policy analysis can make. Upload your first policy today and
+                see how clear insurance can be.
               </p>
             </div>
 
-            <div className="text-center mt-8">
+            <div className="text-center mt-12">
               <Button
                 asChild
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-md group"
               >
-                <Link href="/upload">Get Started Today</Link>
+                <Link href="/upload" className="flex items-center gap-2">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
