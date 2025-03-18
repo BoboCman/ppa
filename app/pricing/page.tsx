@@ -1,108 +1,473 @@
-'use client'
-
-import { CheckCircle, Zap } from 'lucide-react'
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { useRouter } from 'next/navigation'
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Check, CheckCircle, X, Zap, Shield, Users } from "lucide-react"
 
 export default function PricingPage() {
-  const router = useRouter()
-  
-  // Extract list items to constants to improve maintainability
-  const featuresList = [
-    "Premium adequacy analysis",
-    "Performance metrics",
-    "Risk assessment",
-    "Action items",
-    "Client-ready explanations",
-    "Professional formatting"
-  ]
-
-  const benefitsList = [
-    "No subscription required",
-    "No minimum commitment",
-    "Pay only when you need it",
-    "Instant report delivery",
-    "100% satisfaction guarantee"
-  ]
-
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#F8FAFC] to-[#E2E8F0]">
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#4B6FEE] mb-4">Simple, Transparent Pricing</h1>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">$20 per Policy Review</h2>
-          
-          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mb-12">
-            <div className="p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-[#4B6FEE]">What You Get:</h3>
-              <ul className="text-left text-lg text-gray-700 space-y-4 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3 h-6 w-6" />
-                  Comprehensive technical analysis for advisors
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3 h-6 w-6" />
-                  Professional client-ready summary
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3 h-6 w-6" />
-                  Both reports delivered within minutes
-                </li>
-              </ul>
-              
-              <div className="bg-green-50 rounded-lg p-6 mb-8">
-                <h4 className="text-xl font-semibold mb-2 text-green-700">No-Risk First Purchase Guarantee:</h4>
-                <p className="text-gray-700">
-                  Try your first policy review with complete confidence. Not satisfied? Get a full refund within 14 days - no questions asked.
-                </p>
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">
+              Choose Your Insurance Policy Analysis Option
+            </h1>
+            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+              Our AI-powered technology transforms complex insurance illustrations into clear, actionable insights.
+              Select the analysis level that fits your needs.
+            </p>
+          </div>
+
+          {/* Pricing Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Free Tier */}
+            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white flex flex-col">
+              <CardHeader className="pb-0">
+                <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
+                  <Zap className="w-7 h-7 text-[#4B6FEE]" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-800">Policy QuickScan</h2>
+                <div className="mt-2 mb-1">
+                  <span className="text-3xl font-bold text-[#4B6FEE]">FREE</span>
+                </div>
+                <p className="text-gray-600">Basic policy overview</p>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-3 mt-4">
+                  {[
+                    "Policy basics",
+                    "Death benefit summary",
+                    "Structure insights",
+                    "Key consideration",
+                    "Basic recommendations",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button
+                  asChild
+                  className="w-full bg-[#4B6FEE] hover:bg-blue-700 text-white rounded-full py-6 transition-all duration-300 hover:scale-105"
+                >
+                  <Link href="/upload">Get Free QuickScan</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Premium Tier */}
+            <Card className="shadow-xl border-[#4B6FEE] hover:-translate-y-2 transition-all duration-300 bg-white relative flex flex-col">
+              <div className="absolute top-0 inset-x-0 h-2 bg-[#4B6FEE] rounded-t-lg"></div>
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#4B6FEE] text-white text-sm font-semibold py-1 px-4 rounded-full">
+                Most Popular
               </div>
-              
-              <Button 
-                onClick={() => router.push('/pre-payment-info')}
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+              <CardHeader className="pb-0 pt-8">
+                <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
+                  <Shield className="w-7 h-7 text-[#4B6FEE]" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-800">Policy Snapshot + Comprehensive Analysis</h2>
+                <div className="mt-2 mb-1">
+                  <span className="text-3xl font-bold text-[#4B6FEE]">$49</span>
+                  <span className="text-gray-600 ml-1">per policy</span>
+                </div>
+                <p className="text-gray-600">Complete analysis with recommendations</p>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-3 mt-4">
+                  {[
+                    "Email summary highlights",
+                    "Detailed PDF report",
+                    "Protection assessment",
+                    "Premium optimization",
+                    "Cash value analysis",
+                    "Rider evaluation",
+                    "Policy loan strategies",
+                    "Management recommendations",
+                    "Email support",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button
+                  asChild
+                  className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full py-6 transition-all duration-300 hover:scale-105"
+                >
+                  <Link href="/upload">Analyze My Policy Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Enterprise Tier */}
+            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white flex flex-col">
+              <CardHeader className="pb-0">
+                <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
+                  <Users className="w-7 h-7 text-[#4B6FEE]" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-800">Enterprise Policy Intelligence</h2>
+                <div className="mt-2 mb-1">
+                  <span className="text-3xl font-bold text-[#4B6FEE]">Custom</span>
+                </div>
+                <p className="text-gray-600">Professional dashboard for financial advisors</p>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-3 mt-4">
+                  {[
+                    "Instant AI-powered policy analysis dashboard",
+                    "Client-ready visual policy analysis interface",
+                    "Professional AI policy assistant for client conversations",
+                    "On-demand client-ready report generation",
+                    "Strategic conversation starters and client education tools",
+                    "Email reports directly to clients from the platform",
+                    "Text/voice interactive AI assistant for policy questions",
+                    "Unlimited policy reviews for 30 days",
+                    "Multiple advisor accounts",
+                    "Dedicated account manager",
+                    "Priority support",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button
+                  asChild
+                  className="w-full bg-[#4B6FEE] hover:bg-blue-700 text-white rounded-full py-6 transition-all duration-300 hover:scale-105"
+                >
+                  <Link href="mailto:enterprise@financialplanner-ai.com">Contact Our Team</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+
+          {/* Feature Comparison Table */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-[#4B6FEE] mb-8 text-center">Feature Comparison</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-blue-50">
+                    <th className="py-4 px-6 text-left text-gray-700 font-semibold border-b border-blue-100 min-w-[200px]">
+                      Feature
+                    </th>
+                    <th className="py-4 px-6 text-center text-gray-700 font-semibold border-b border-blue-100 min-w-[150px]">
+                      QuickScan
+                      <br />
+                      (Free)
+                    </th>
+                    <th className="py-4 px-6 text-center text-gray-700 font-semibold border-b border-blue-100 min-w-[150px]">
+                      Snapshot + Analysis
+                      <br />
+                      ($49)
+                    </th>
+                    <th className="py-4 px-6 text-center text-gray-700 font-semibold border-b border-blue-100 min-w-[150px]">
+                      Enterprise
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Policy Analysis */}
+                  <tr className="bg-blue-50/50">
+                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                      Policy Analysis
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Policy Overview</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Basic</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Death Benefit Analysis</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Basic</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Detailed</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Detailed</td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Premium Structure</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Summary</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Full Analysis</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Full Analysis</td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Policy Mechanics</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+
+                  {/* Detailed Insights */}
+                  <tr className="bg-blue-50/50">
+                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                      Detailed Insights
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Protection Strategy</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Premium Optimization</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Cash Value Growth</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Rider Benefits</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+
+                  {/* Deliverables */}
+                  <tr className="bg-blue-50/50">
+                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                      Deliverables
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Email Summary</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Basic</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Comprehensive</td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">PDF Report</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Complete</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">Complete</td>
+                  </tr>
+
+                  {/* Enterprise Dashboard */}
+                  <tr className="bg-blue-50/50">
+                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                      Enterprise Dashboard
+                    </td>
+                  </tr>
+                  {[
+                    "Quick Look (Policy Summary)",
+                    "Policy Mechanics Section",
+                    "Policy Features Analysis",
+                    "Smart Policy Care Guidance",
+                    "Client Talking Points",
+                    "Action Planning Tools",
+                    "Interactive AI Assistant",
+                    "Voice/Text Interaction",
+                    "One-Click Client Reporting",
+                    "Direct Client Email Sharing",
+                  ].map((feature, index) => (
+                    <tr key={feature} className={index % 2 === 0 ? "bg-gray-50" : ""}>
+                      <td className="py-3 px-6 border-t border-gray-200">{feature}</td>
+                      <td className="py-3 px-6 text-center border-t border-gray-200">
+                        <X className="h-5 w-5 text-gray-400 mx-auto" />
+                      </td>
+                      <td className="py-3 px-6 text-center border-t border-gray-200">
+                        <X className="h-5 w-5 text-gray-400 mx-auto" />
+                      </td>
+                      <td className="py-3 px-6 text-center border-t border-gray-200">
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                      </td>
+                    </tr>
+                  ))}
+
+                  {/* Support & Access */}
+                  <tr className="bg-blue-50/50">
+                    <td colSpan={4} className="py-3 px-6 font-semibold text-[#4B6FEE]">
+                      Support & Access
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Email Assistance</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Dedicated Account Manager</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Multiple Advisor Accounts</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">30-Day Unlimited Reviews</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="even:bg-gray-50">
+                    <td className="py-3 px-6 border-t border-gray-200">Priority Response</td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <X className="h-5 w-5 text-gray-400 mx-auto" />
+                    </td>
+                    <td className="py-3 px-6 text-center border-t border-gray-200">
+                      <Check className="h-5 w-5 text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Supporting Content */}
+          <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
+            <h2 className="text-3xl font-bold text-[#4B6FEE] mb-6 text-center">
+              The Future of Life Insurance Policy Reviews Is Here
+            </h2>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">AI-Powered Insights, Human-Guided Decisions</h3>
+              <p className="text-gray-600 mb-4">
+                At Insurance Planner AI, we've revolutionized how life insurance policies are analyzed and understood.
+                Our digital-first approach combines cutting-edge artificial intelligence with intuitive design to
+                deliver clarity where complexity once reigned.
+              </p>
+              <blockquote className="border-l-4 border-[#4B6FEE] pl-4 py-2 italic text-gray-700 my-4">
+                "Smart technology doing the heavy lifting. Smart humans making the decisions."
+              </blockquote>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Why Insurance Planner AI Is Different</h3>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-4">
+                <div className="space-y-2">
+                  <h4 className="font-bold text-[#4B6FEE]">Speed Without Sacrifice</h4>
+                  <p className="text-gray-600">
+                    What once took days or weeks now happens in minutes. Our AI analyzes complex policy documents
+                    instantly, without sacrificing depth or accuracy.
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-bold text-[#4B6FEE]">Clarity Through Technology</h4>
+                  <p className="text-gray-600">
+                    We translate insurance jargon into straightforward insights that empower policyholders and advisors
+                    to make informed decisions with confidence.
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-bold text-[#4B6FEE]">Complete Flexibility</h4>
+                  <p className="text-gray-600">
+                    Whether you're reviewing a single policy or managing hundreds of clients, our platform scales to
+                    your needs with options for individuals and financial professionals alike.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                The Perfect Balance of Technology and Human Expertise
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Our platform doesn't replace human judgment—it enhances it. By automating the complex work of policy
+                analysis, we free you to focus on what matters most: making smart decisions about your financial future
+                or providing valuable guidance to your clients.
+              </p>
+              <p className="text-gray-600">
+                Experience the difference that AI-powered policy analysis can make. Upload your first policy today and
+                see how clear insurance can be.
+              </p>
+            </div>
+
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
               >
-                Start Your Analysis
+                <Link href="/upload">Get Started Today</Link>
               </Button>
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-md p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-[#4B6FEE]">Includes:</h3>
-              <ul className="text-left text-gray-700 space-y-3">
-                {featuresList.map((item, index) => (
-                  <li key={`feature-${index}`} className="flex items-center">
-                    <CheckCircle className="text-green-500 mr-3 h-5 w-5" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-md p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-[#4B6FEE]">No surprises:</h3>
-              <ul className="text-left text-gray-700 space-y-3">
-                {benefitsList.map((item, index) => (
-                  <li key={`benefit-${index}`} className="flex items-center">
-                    <Zap className="text-[#4B6FEE] mr-3 h-5 w-5" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <p className="text-sm text-gray-500 mt-8">
-            To request a refund, email{' '}
-            <a 
-              href="mailto:support@financialplanner-ai.com" 
-              className="text-[#4B6FEE] hover:underline"
-            >
-              support@financialplanner-ai.com
-            </a>
-            . Full terms and conditions in our Terms of Service.
-          </p>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   )
 }
+
