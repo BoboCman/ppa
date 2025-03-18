@@ -1,5 +1,6 @@
 "use client"
 
+/*
 import { useState } from "react"
 import Link from "next/link"
 import {
@@ -409,4 +410,9 @@ export default function ResourcesPage() {
     </div>
   )
 }
+*/
 
+// Replace with a component that returns null to trigger 404
+export default function ResourcesPage() {
+  return null;
+}
