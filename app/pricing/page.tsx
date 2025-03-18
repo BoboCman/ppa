@@ -32,8 +32,9 @@ export default function PricingPage() {
                   <span className="text-3xl font-bold text-[#4B6FEE]">FREE</span>
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
-                <p className="text-gray-600 font-medium">Basic policy overview</p>
-                <p className="text-gray-600 text-sm mb-4">Perfect for initial assessment</p>
+                <p className="text-gray-600 font-medium mb-4">
+                  Basic policy overview that's perfect for an initial assessment
+                </p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
                 <ul className="space-y-4">
@@ -60,11 +61,8 @@ export default function PricingPage() {
             {/* Premium Tier */}
             <Card className="shadow-xl border-[#4B6FEE] hover:-translate-y-2 transition-all duration-300 bg-white relative flex flex-col z-10 overflow-hidden">
               <div className="absolute top-0 inset-x-0 h-1.5 bg-[#4B6FEE] rounded-t-lg"></div>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#4B6FEE] text-white text-sm font-semibold py-1 px-4 rounded-full shadow-md z-20">
-                Most Popular
-              </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/70 rounded-bl-full z-0"></div>
-              <CardHeader className="pb-0 pt-8 relative z-10">
+              <CardHeader className="pb-0 pt-6 relative z-10">
                 <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
                   <Shield className="w-7 h-7 text-[#4B6FEE]" />
                 </div>
@@ -112,13 +110,14 @@ export default function PricingPage() {
                 <div className="rounded-full bg-blue-50 p-3 w-14 h-14 flex items-center justify-center mb-4">
                   <Users className="w-7 h-7 text-[#4B6FEE]" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Enterprise Policy Intelligence</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">Policy Pro Dashboard</h2>
                 <div className="mb-2">
                   <span className="text-3xl font-bold text-[#4B6FEE]">Custom</span>
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
-                <p className="text-gray-600 font-medium">Professional dashboard for financial</p>
-                <p className="text-gray-600 font-medium mb-4">advisors</p>
+                <p className="text-gray-600 font-medium mb-4">
+                  All-in-one policy review platform for financial advisors
+                </p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
                 <ul className="space-y-4">
@@ -155,7 +154,7 @@ export default function PricingPage() {
             <div className="overflow-x-auto rounded-xl shadow-md">
               <table className="w-full border-collapse bg-white">
                 <thead>
-                  <tr className="bg-[#4B6FEE]/10">
+                  <tr className="bg-[#4B6FEE]/20">
                     <th className="py-5 px-6 text-left text-gray-700 font-bold border-b border-blue-100 min-w-[200px] text-lg">
                       Feature
                     </th>
@@ -168,7 +167,7 @@ export default function PricingPage() {
                       <div className="text-sm font-medium text-gray-500">($49)</div>
                     </th>
                     <th className="py-5 px-6 text-center text-gray-700 font-bold border-b border-blue-100 min-w-[150px] text-lg">
-                      Enterprise
+                      Policy Pro Dashboard
                     </th>
                   </tr>
                 </thead>
@@ -409,7 +408,7 @@ export default function PricingPage() {
                   {/* Enterprise Dashboard */}
                   <tr className="bg-[#4B6FEE]/10">
                     <td colSpan={4} className="py-4 px-6 font-bold text-[#4B6FEE] text-lg border-t border-blue-100">
-                      Enterprise Dashboard
+                      Pro Dashboard Features
                     </td>
                   </tr>
                   {[
@@ -537,13 +536,6 @@ export default function PricingPage() {
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
                     <td className="py-4 px-6 border-t border-gray-200 font-medium">30-Day Unlimited Reviews</td>
-                    <td className="py-4 px-6 text-center border-t border-gray-200">
-                      <div className="flex justify-center">
-                        <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
-                          <X className="h-5 w-5 text-red-400" />
-                        </div>
-                      </div>
-                    </td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
