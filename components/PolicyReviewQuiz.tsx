@@ -96,7 +96,7 @@ const PolicyReviewQuiz = () => {
         title: "Policy Review Recommended",
         description:
           "Based on your responses, a policy review would be beneficial. Our AI can quickly analyze policy details and identify potential opportunities for improvement.",
-        buttonText: "Analyze Policy Now",
+        buttonText: "Get a Free Policy Snapshot",
         buttonAction: () => router.push("/upload"),
         urgency: "medium",
       }
@@ -119,7 +119,7 @@ const PolicyReviewQuiz = () => {
           {showResults ? "Policy Review Assessment" : "Quick Policy Review Quiz"}
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-6">
+      <CardContent className="p-4 sm:p-6">
         {!showResults ? (
           <div className="space-y-6">
             <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
@@ -144,7 +144,9 @@ const PolicyReviewQuiz = () => {
               </span>
             </div>
 
-            <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-6">{questions[currentQuestion].text}</h3>
+            <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-6 break-words">
+              {questions[currentQuestion].text}
+            </h3>
 
             <div className="flex flex-col gap-3">
               {options[currentQuestion].map((option, index) => (
@@ -152,7 +154,7 @@ const PolicyReviewQuiz = () => {
                   key={index}
                   onClick={() => handleAnswer(index)}
                   variant="outline"
-                  className="justify-start text-left py-4 border-[#4B6FEE] text-[#4B6FEE] hover:bg-blue-50"
+                  className="justify-start text-left py-4 px-4 border-[#4B6FEE] text-[#4B6FEE] hover:bg-blue-50 whitespace-normal h-auto min-h-[3rem]"
                 >
                   {option}
                 </Button>
@@ -185,14 +187,16 @@ const PolicyReviewQuiz = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">{recommendation.title}</h3>
+                  <h3 className="text-xl font-semibold text-center text-gray-800 mb-2 break-words">
+                    {recommendation.title}
+                  </h3>
 
-                  <p className="text-gray-600 text-center mb-6">{recommendation.description}</p>
+                  <p className="text-gray-600 text-center mb-6 break-words">{recommendation.description}</p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button
                       onClick={recommendation.buttonAction}
-                      className={`flex-1 py-6 ${
+                      className={`flex-1 py-4 sm:py-6 ${
                         recommendation.urgency === "high"
                           ? "bg-red-600 hover:bg-red-700"
                           : "bg-[#4B6FEE] hover:bg-blue-700"
@@ -206,7 +210,7 @@ const PolicyReviewQuiz = () => {
                     <Button
                       onClick={resetQuiz}
                       variant="outline"
-                      className="flex-1 border-[#4B6FEE] text-[#4B6FEE] hover:bg-blue-50 py-6"
+                      className="flex-1 border-[#4B6FEE] text-[#4B6FEE] hover:bg-blue-50 py-4 sm:py-6"
                     >
                       Retake Quiz
                     </Button>
