@@ -157,7 +157,7 @@ export default function UploadPage() {
               Ready to Review a Policy?
             </h1>
             <p className="text-lg text-gray-600 font-medium">
-              Just 2 quick steps to get an Insurance Planner AI analysis package
+              Just 2 quick steps to get Insurance Planner AI policy review reports
             </p>
           </div>
 
@@ -196,7 +196,7 @@ export default function UploadPage() {
                 <span className={cn("block font-semibold", step === 2 ? "text-[#4B6FEE]" : "text-gray-400")}>
                   Next, enter email
                 </span>
-                <span className="block text-sm text-gray-500">Get an analysis</span>
+                <span className="block text-sm text-gray-500">Get policy review reports</span>
               </div>
             </div>
           </div>
@@ -294,7 +294,7 @@ export default function UploadPage() {
                     )}
                     <div className="space-y-3">
                       <label htmlFor="email-input" className="block text-lg font-medium text-gray-700">
-                        Where should we send your analysis?
+                        Where should we send your policy review reports?
                       </label>
                       <Input
                         id="email-input"
@@ -309,7 +309,7 @@ export default function UploadPage() {
                     <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-lg text-sm text-gray-600">
                       <span className="text-[#4B6FEE] mt-0.5">ⓘ</span>
                       <p>
-                        The Insurance Planner AI analysis package will be sent to this email within minutes. Please check your spam folder if not
+                        The Insurance Planner AI policy review reports will be sent to this email within minutes. Please check your spam folder if not
                         received.
                       </p>
                     </div>
@@ -335,7 +335,7 @@ export default function UploadPage() {
                             Processing...
                           </span>
                         ) : (
-                          "Get My Policy Review"
+                          "Get My Policy Review Reports"
                         )}
                       </Button>
                     </div>
