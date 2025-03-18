@@ -1,5 +1,5 @@
 "use client"
-
+/*
 import type { FC } from "react"
 import { CheckCircle, Eye, ThumbsUp, Shield, MessageCircle } from "lucide-react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
@@ -173,6 +173,7 @@ const CarriersPage: FC = () => {
     </div>
   )
 }
+*/
 
 export default CarriersPage
 
