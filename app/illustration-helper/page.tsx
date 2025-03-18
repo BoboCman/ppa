@@ -73,7 +73,6 @@ interface OptionCardProps {
   onClick: () => void
 }
 
-// Update the OptionCard component to be more mobile-friendly
 function OptionCard({ icon, title, description, onClick }: OptionCardProps) {
   return (
     <Card className="flex flex-col p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white">
@@ -117,7 +116,7 @@ export default function IllustrationHelper() {
       title: "See how a policy is performing",
       description: "Get a complete picture of a policy's health and future",
       contextBar:
-        "You selected 'See how a policy is performing.' This illustration will show a complete picture of the policy's health and future. Follow the steps below to get the illustration.",
+        "You selected 'See how a policy is performing.' This illustration will show a complete picture of the policy&apos;s health and future. Follow the steps below to get the illustration.",
       items: [
         "Coverage amount and type (Level or Increasing)",
         "Year-by-year projected cash value growth",
@@ -242,7 +241,6 @@ export default function IllustrationHelper() {
     setStep(3)
   }
 
-  // Update the step 1 return section
   if (step === 1) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
@@ -269,8 +267,8 @@ export default function IllustrationHelper() {
                   Why an Illustration Is Needed
                 </h3>
                 <p className="text-gray-600 text-lg leading-relaxed max-w-3xl text-center">
-                  An illustration shows exactly how a policy is performing and what to expect in the future. It's the
-                  key document needed for a thorough policy review.
+                  An illustration shows exactly how a policy is performing and what to expect in the future. It&apos;s
+                  the key document needed for a thorough policy review.
                 </p>
                 <div className="flex flex-col md:flex-row items-center gap-4 mt-4 w-full">
                   <Button
@@ -301,7 +299,6 @@ export default function IllustrationHelper() {
     )
   }
 
-  // Update the step 2 return section
   if (step === 2) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
@@ -361,11 +358,13 @@ export default function IllustrationHelper() {
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <ProgressSteps currentStep={3} />
+
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">{content.title}</h1>
           <p className="text-xl text-gray-600 font-light">{content.description}</p>
         </div>
-        // Update the Card component in step 3 to be more mobile-friendly
+
+        {/* Card component in step 3 */}
         <Card className="w-full bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border-blue-100 mb-8">
           <CardContent className="p-4 sm:p-8">
             <div className="bg-blue-50 p-3 sm:p-4 rounded-lg mb-6 sm:mb-8 text-[#4B6FEE] font-medium">
@@ -521,7 +520,8 @@ export default function IllustrationHelper() {
             </Tabs>
           </CardContent>
         </Card>
-        // Update the bottom navigation buttons
+
+        {/* Bottom navigation buttons */}
         <div className="flex flex-col sm:flex-row justify-between gap-4 mt-8">
           <Button
             variant="outline"
