@@ -8,8 +8,8 @@ interface BetaUser {
 
 // Beta test users with credentials
 export const BETA_USERS: BetaUser[] = [
-  { email: 'bobchwalk@outlook.com', password: 'test123' },
-  { email: 'gabe.enrique.miranda@gmail.com', password: 'gabe123' },
+  { email: 'bobchwalk@outlook.com', password: 'test321' },
+  { email: 'rpc@gmail.com', password: 'rpc123' },
   { email: 'bobchwalk@gmail.com', password: 'bob123' },
   { email: 'tester1@company.com', password: 'test456' },
   { email: 'demo1@insurance.com', password: 'demo789' },
