@@ -402,12 +402,12 @@ export default function PricingPage() {
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-3">AI-Powered Insights, Human-Guided Decisions</h3>
               <p className="text-gray-600 mb-4">
-                At Insurance Planner AI, we've revolutionized how life insurance policies are analyzed and understood.
-                Our digital-first approach combines cutting-edge artificial intelligence with intuitive design to
-                deliver clarity where complexity once reigned.
+                At Insurance Planner AI, we&apos;ve revolutionized how life insurance policies are analyzed and
+                understood. Our digital-first approach combines cutting-edge artificial intelligence with intuitive
+                design to deliver clarity where complexity once reigned.
               </p>
               <blockquote className="border-l-4 border-[#4B6FEE] pl-4 py-2 italic text-gray-700 my-4">
-                "Smart technology doing the heavy lifting. Smart humans making the decisions."
+                &quot;Smart technology doing the heavy lifting. Smart humans making the decisions.&quot;
               </blockquote>
             </div>
 
@@ -434,8 +434,8 @@ export default function PricingPage() {
                 <div className="space-y-2">
                   <h4 className="font-bold text-[#4B6FEE]">Complete Flexibility</h4>
                   <p className="text-gray-600">
-                    Whether you're reviewing a single policy or managing hundreds of clients, our platform scales to
-                    your needs with options for individuals and financial professionals alike.
+                    Whether you&apos;re reviewing a single policy or managing hundreds of clients, our platform scales
+                    to your needs with options for individuals and financial professionals alike.
                   </p>
                 </div>
               </div>
@@ -446,9 +446,9 @@ export default function PricingPage() {
                 The Perfect Balance of Technology and Human Expertise
               </h3>
               <p className="text-gray-600 mb-4">
-                Our platform doesn't replace human judgment—it enhances it. By automating the complex work of policy
-                analysis, we free you to focus on what matters most: making smart decisions about your financial future
-                or providing valuable guidance to your clients.
+                Our platform doesn&apos;t replace human judgment—it enhances it. By automating the complex work of
+                policy analysis, we free you to focus on what matters most: making smart decisions about your financial
+                future or providing valuable guidance to your clients.
               </p>
               <p className="text-gray-600">
                 Experience the difference that AI-powered policy analysis can make. Upload your first policy today and
