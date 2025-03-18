@@ -33,7 +33,7 @@ export default function PricingPage() {
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
                 <p className="text-gray-600 font-medium mb-4">
-                  Basic policy overview that&apos;s perfect for an initial assessment
+                  Basic policy overview that's perfect for an initial assessment
                 </p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
@@ -185,7 +185,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Policy Overview</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Policy Overview</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
                         Basic
@@ -203,7 +203,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Death Benefit Analysis</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Death Benefit Analysis</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
                         Basic
@@ -221,7 +221,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Premium Structure</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Premium Structure</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
                         Summary
@@ -239,7 +239,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Policy Mechanics</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Policy Mechanics</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -270,7 +270,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Protection Strategy</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Protection Strategy</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -294,7 +294,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Premium Optimization</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Premium Optimization</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -318,7 +318,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Cash Value Growth</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Cash Value Growth</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -342,7 +342,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Rider Benefits</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Rider Benefits</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -373,7 +373,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Email Summary</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Email Summary</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">
                         Basic
@@ -391,7 +391,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">PDF Report</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">PDF Report</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -469,7 +469,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Email Assistance</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Email Assistance</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -493,7 +493,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Dedicated Account Manager</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Dedicated Account Manager</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -517,7 +517,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Multiple Advisor Accounts</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Multiple Advisor Accounts</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -541,7 +541,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">30-Day Unlimited Reviews</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">30-Day Unlimited Reviews</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
@@ -565,7 +565,7 @@ export default function PricingPage() {
                     </td>
                   </tr>
                   <tr className="even:bg-gray-50 hover:bg-blue-50/30 transition-colors duration-150">
-                    <td className="py-4 px-6 border-t border-gray-200 font-medium">Priority Response</td>
+                    <td className="py-4 px-6 border-t border-gray-200 font-medium pl-8">Priority Response</td>
                     <td className="py-4 px-6 text-center border-t border-gray-200">
                       <div className="flex justify-center">
                         <div className="rounded-full bg-red-50 p-1 w-8 h-8 flex items-center justify-center">
