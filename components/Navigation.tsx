@@ -16,6 +16,7 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "Why Review?" },
+    { href: "/pricing", label: "Pricing" },
     { href: "mailto:support@financialplanner-ai.com", label: "Contact" },
   ]
 
