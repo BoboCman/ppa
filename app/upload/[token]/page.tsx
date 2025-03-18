@@ -335,7 +335,7 @@ export default function UploadPage() {
                             Processing...
                           </span>
                         ) : (
-                          "Get My Analysis"
+                          "Get My Policy Review"
                         )}
                       </Button>
                     </div>
