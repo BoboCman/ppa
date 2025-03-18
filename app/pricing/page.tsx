@@ -11,7 +11,7 @@ export default function PricingPage() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#4B6FEE] tracking-tight">
-              Choose Your Insurance Policy Analysis Option
+              Choose Your Insurance Policy Review Option
             </h1>
             <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
               Our AI transforms complex insurance illustrations into clear insights.
@@ -33,12 +33,17 @@ export default function PricingPage() {
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
                 <p className="text-gray-600 font-medium mb-4">
-                  Basic policy overview that&apos;s perfect for an initial assessment
+                  Basic policy overview that's perfect for an initial assessment
                 </p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
                 <ul className="space-y-4">
-                  {["Policy basics & structure", "Death benefit summary", "Key considerations"].map((feature) => (
+                  {[
+                    "Email summary highlights",
+                    "Policy basics & structure",
+                    "Death benefit summary",
+                    "Key considerations",
+                  ].map((feature) => (
                     <li key={feature} className="flex items-start gap-3 group">
                       <div className="flex-shrink-0 rounded-full p-1 bg-green-50">
                         <CheckCircle className="h-5 w-5 text-green-500" />
@@ -68,7 +73,7 @@ export default function PricingPage() {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">Full Policy Review</h2>
                 <div className="mb-2 flex items-baseline">
-                  <span className="text-3xl font-bold text-[#4B6FEE]">$49</span>
+                  <span className="text-3xl font-bold text-[#4B6FEE]">$0</span>
                   <span className="text-gray-600 ml-1">per policy</span>
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
@@ -164,10 +169,11 @@ export default function PricingPage() {
                     </th>
                     <th className="py-5 px-6 text-center text-gray-700 font-bold border-b border-blue-100 min-w-[150px] text-lg">
                       Full Policy Review
-                      <div className="text-sm font-medium text-gray-500">($49)</div>
+                      <div className="text-sm font-medium text-gray-500">($0)</div>
                     </th>
                     <th className="py-5 px-6 text-center text-gray-700 font-bold border-b border-blue-100 min-w-[150px] text-lg">
                       Policy Pro Dashboard
+                      <div className="text-sm font-medium text-gray-500">(Custom)</div>
                     </th>
                   </tr>
                 </thead>
