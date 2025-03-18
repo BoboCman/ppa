@@ -14,8 +14,7 @@ export default function PricingPage() {
               Choose Your Insurance Policy Analysis Option
             </h1>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Our AI-powered technology transforms complex insurance illustrations into clear, actionable insights.
-              Select the analysis level that fits your needs.
+              Our AI transforms complex insurance illustrations into clear insights.
             </p>
           </div>
 
@@ -35,13 +34,7 @@ export default function PricingPage() {
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-3 mt-4">
-                  {[
-                    "Policy basics",
-                    "Death benefit summary",
-                    "Structure insights",
-                    "Key consideration",
-                    "Basic recommendations",
-                  ].map((feature) => (
+                  {["Policy basics & structure", "Death benefit summary", "Key considerations"].map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">{feature}</span>
@@ -81,13 +74,9 @@ export default function PricingPage() {
                   {[
                     "Email summary highlights",
                     "Detailed PDF report",
-                    "Protection assessment",
-                    "Premium optimization",
-                    "Cash value analysis",
-                    "Rider evaluation",
-                    "Policy loan strategies",
-                    "Management recommendations",
-                    "Email support",
+                    "Protection & premium analysis",
+                    "Cash value & rider evaluation",
+                    "Policy strategies & recommendations",
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -121,17 +110,11 @@ export default function PricingPage() {
               <CardContent className="flex-grow">
                 <ul className="space-y-3 mt-4">
                   {[
-                    "Instant AI-powered policy analysis dashboard",
-                    "Client-ready visual policy analysis interface",
-                    "Professional AI policy assistant for client conversations",
-                    "On-demand client-ready report generation",
-                    "Strategic conversation starters and client education tools",
-                    "Email reports directly to clients from the platform",
-                    "Text/voice interactive AI assistant for policy questions",
-                    "Unlimited policy reviews for 30 days",
-                    "Multiple advisor accounts",
-                    "Dedicated account manager",
-                    "Priority support",
+                    "AI-powered analysis dashboard",
+                    "Client-ready visual interface",
+                    "Interactive policy assistant",
+                    "One-click client reporting",
+                    "Unlimited reviews (30 days)",
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -401,58 +384,36 @@ export default function PricingPage() {
 
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-3">AI-Powered Insights, Human-Guided Decisions</h3>
-              <p className="text-gray-600 mb-4">
-                At Insurance Planner AI, we&apos;ve revolutionized how life insurance policies are analyzed and
-                understood. Our digital-first approach combines cutting-edge artificial intelligence with intuitive
-                design to deliver clarity where complexity once reigned.
-              </p>
               <blockquote className="border-l-4 border-[#4B6FEE] pl-4 py-2 italic text-gray-700 my-4">
                 &quot;Smart technology doing the heavy lifting. Smart humans making the decisions.&quot;
               </blockquote>
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Why Insurance Planner AI Is Different</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Why We&apos;re Different:</h3>
 
               <div className="grid md:grid-cols-3 gap-6 mt-4">
                 <div className="space-y-2">
-                  <h4 className="font-bold text-[#4B6FEE]">Speed Without Sacrifice</h4>
-                  <p className="text-gray-600">
-                    What once took days or weeks now happens in minutes. Our AI analyzes complex policy documents
-                    instantly, without sacrificing depth or accuracy.
-                  </p>
+                  <h4 className="font-bold text-[#4B6FEE]">Speed</h4>
+                  <p className="text-gray-600">Minutes instead of days</p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-bold text-[#4B6FEE]">Clarity Through Technology</h4>
-                  <p className="text-gray-600">
-                    We translate insurance jargon into straightforward insights that empower policyholders and advisors
-                    to make informed decisions with confidence.
-                  </p>
+                  <h4 className="font-bold text-[#4B6FEE]">Clarity</h4>
+                  <p className="text-gray-600">Plain language insights</p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-bold text-[#4B6FEE]">Complete Flexibility</h4>
-                  <p className="text-gray-600">
-                    Whether you&apos;re reviewing a single policy or managing hundreds of clients, our platform scales
-                    to your needs with options for individuals and financial professionals alike.
-                  </p>
+                  <h4 className="font-bold text-[#4B6FEE]">Flexibility</h4>
+                  <p className="text-gray-600">From individuals to enterprises</p>
                 </div>
               </div>
             </div>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                The Perfect Balance of Technology and Human Expertise
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Our platform doesn&apos;t replace human judgment—it enhances it. By automating the complex work of
-                policy analysis, we free you to focus on what matters most: making smart decisions about your financial
-                future or providing valuable guidance to your clients.
-              </p>
-              <p className="text-gray-600">
-                Experience the difference that AI-powered policy analysis can make. Upload your first policy today and
-                see how clear insurance can be.
+            <div className="mb-8 text-center">
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Our platform enhances human judgment by automating complex analysis, freeing you to focus on what
+                matters most.
               </p>
             </div>
 
