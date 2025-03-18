@@ -73,17 +73,18 @@ interface OptionCardProps {
   onClick: () => void
 }
 
+// Update the OptionCard component to be more mobile-friendly
 function OptionCard({ icon, title, description, onClick }: OptionCardProps) {
   return (
-    <Card className="flex flex-col p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white">
+    <Card className="flex flex-col p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-blue-100 hover:-translate-y-1 bg-white">
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 text-[#4B6FEE]">
         {icon}
       </div>
-      <h3 className="mb-2 text-xl font-bold text-[#4B6FEE]">{title}</h3>
-      <p className="mb-6 text-gray-600">{description}</p>
+      <h3 className="mb-2 text-xl font-bold text-[#4B6FEE] break-words">{title}</h3>
+      <p className="mb-6 text-gray-600 break-words">{description}</p>
       <Button
         onClick={onClick}
-        className="mt-auto flex items-center justify-between bg-[#4B6FEE] hover:bg-blue-700 text-white px-6 py-4 rounded-full transition-all duration-300 hover:scale-105 group"
+        className="mt-auto flex items-center justify-between bg-[#4B6FEE] hover:bg-blue-700 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 group whitespace-normal h-auto min-h-[2.5rem]"
       >
         <span className="flex items-center gap-2">
           Select
@@ -241,6 +242,7 @@ export default function IllustrationHelper() {
     setStep(3)
   }
 
+  // Update the step 1 return section
   if (step === 1) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
@@ -248,7 +250,7 @@ export default function IllustrationHelper() {
           <ProgressSteps currentStep={1} />
 
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">
               Need help getting an illustration?
             </h1>
             <p className="text-xl text-gray-600 mb-4 font-light">
@@ -258,22 +260,22 @@ export default function IllustrationHelper() {
           </div>
 
           <Card className="w-full bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border-blue-100 mb-8">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-8">
               <div className="flex flex-col items-center space-y-6">
                 <div className="rounded-full bg-blue-50 p-3">
                   <FileText className="w-8 h-8 text-[#4B6FEE]" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#4B6FEE] text-center">
+                <h3 className="text-xl md:text-3xl font-bold text-[#4B6FEE] text-center">
                   Why an Illustration Is Needed
                 </h3>
                 <p className="text-gray-600 text-lg leading-relaxed max-w-3xl text-center">
-                  An illustration shows exactly how a policy is performing and what to expect in the future. It is the
+                  An illustration shows exactly how a policy is performing and what to expect in the future. It's the
                   key document needed for a thorough policy review.
                 </p>
-                <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
+                <div className="flex flex-col md:flex-row items-center gap-4 mt-4 w-full">
                   <Button
                     onClick={() => setStep(2)}
-                    className="bg-[#4B6FEE] hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
+                    className="bg-[#4B6FEE] hover:bg-blue-700 text-white px-6 sm:px-8 py-4 sm:py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group w-full md:w-auto"
                   >
                     <span className="flex items-center gap-2">
                       Get Started
@@ -282,7 +284,7 @@ export default function IllustrationHelper() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-[#4B6FEE] text-[#4B6FEE] px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
+                    className="border-[#4B6FEE] text-[#4B6FEE] px-6 sm:px-8 py-4 sm:py-6 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group w-full md:w-auto"
                     onClick={() => router.push("/")}
                   >
                     <span className="flex items-center gap-2">
@@ -299,14 +301,15 @@ export default function IllustrationHelper() {
     )
   }
 
+  // Update the step 2 return section
   if (step === 2) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <ProgressSteps currentStep={2} />
 
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">
+          <div className="text-center mb-8 sm:mb-12">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">
               Which type of illustration is needed?
             </h1>
             <p className="text-xl text-gray-600 font-light">
@@ -314,7 +317,7 @@ export default function IllustrationHelper() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {options.map((option) => (
               <OptionCard
                 key={option.value}
@@ -326,10 +329,10 @@ export default function IllustrationHelper() {
             ))}
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col sm:flex-row justify-between gap-4">
             <Button
               variant="outline"
-              className="border-[#4B6FEE] text-[#4B6FEE] px-6 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
+              className="border-[#4B6FEE] text-[#4B6FEE] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
               onClick={() => setStep(1)}
             >
               <span className="flex items-center gap-2">
@@ -338,7 +341,7 @@ export default function IllustrationHelper() {
             </Button>
             <Button
               variant="outline"
-              className="border-[#4B6FEE] text-[#4B6FEE] px-6 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
+              className="border-[#4B6FEE] text-[#4B6FEE] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
               onClick={() => router.push("/")}
             >
               <span className="flex items-center gap-2">
@@ -358,46 +361,47 @@ export default function IllustrationHelper() {
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-blue-100/50 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <ProgressSteps currentStep={3} />
-
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#4B6FEE] tracking-tight">{content.title}</h1>
           <p className="text-xl text-gray-600 font-light">{content.description}</p>
         </div>
-
+        // Update the Card component in step 3 to be more mobile-friendly
         <Card className="w-full bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border-blue-100 mb-8">
-          <CardContent className="p-8">
-            <div className="bg-blue-50 p-4 rounded-lg mb-8 text-[#4B6FEE] font-medium">
-              <p>{content.contextBar}</p>
+          <CardContent className="p-4 sm:p-8">
+            <div className="bg-blue-50 p-3 sm:p-4 rounded-lg mb-6 sm:mb-8 text-[#4B6FEE] font-medium">
+              <p className="text-sm sm:text-base">{content.contextBar}</p>
             </div>
 
             <Tabs defaultValue="what-youll-see" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-6 h-12 items-center bg-gray-100 p-1 rounded-lg">
+              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 mb-6 h-auto items-center bg-gray-100 p-1 rounded-lg gap-2">
                 <TabsTrigger
                   value="what-youll-see"
-                  className="rounded-full h-10 data-[state=active]:bg-[#4B6FEE] data-[state=active]:text-white data-[state=active]:shadow-sm flex items-center justify-center gap-2 transition-all duration-300"
+                  className="rounded-full h-10 data-[state=active]:bg-[#4B6FEE] data-[state=active]:text-white data-[state=active]:shadow-sm flex items-center justify-center gap-2 transition-all duration-300 whitespace-normal py-2 px-3"
                 >
-                  <Eye className="h-4 w-4" />
-                  First, Preview Content
+                  <Eye className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-sm">First, Preview Content</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="request-script"
-                  className="rounded-full h-10 data-[state=active]:bg-[#4B6FEE] data-[state=active]:text-white data-[state=active]:shadow-sm flex items-center justify-center gap-2 transition-all duration-300"
+                  className="rounded-full h-10 data-[state=active]:bg-[#4B6FEE] data-[state=active]:text-white data-[state=active]:shadow-sm flex items-center justify-center gap-2 transition-all duration-300 whitespace-normal py-2 px-3"
                 >
-                  <FileText className="h-4 w-4" />
-                  Next, Get Script
+                  <FileText className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-sm">Next, Get Script</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="next-steps"
-                  className="rounded-full h-10 data-[state=active]:bg-[#4B6FEE] data-[state=active]:text-white data-[state=active]:shadow-sm flex items-center justify-center gap-2 transition-all duration-300"
+                  className="rounded-full h-10 data-[state=active]:bg-[#4B6FEE] data-[state=active]:text-white data-[state=active]:shadow-sm flex items-center justify-center gap-2 transition-all duration-300 whitespace-normal py-2 px-3"
                 >
-                  <CheckSquare className="h-4 w-4" />
-                  Finally, Take Action
+                  <CheckSquare className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-sm">Finally, Take Action</span>
                 </TabsTrigger>
               </TabsList>
 
               <TabsContent value="what-youll-see" className="mt-0">
-                <Card className="mb-6 p-6 bg-blue-50 border-blue-100">
-                  <h3 className="text-lg font-medium text-[#4B6FEE] mb-2">{content.introCards.preview}</h3>
+                <Card className="mb-6 p-4 sm:p-6 bg-blue-50 border-blue-100">
+                  <h3 className="text-base sm:text-lg font-medium text-[#4B6FEE] mb-2 break-words">
+                    {content.introCards.preview}
+                  </h3>
                 </Card>
                 <ul className="space-y-4" role="list">
                   {content.items.map((item, index) => (
@@ -408,25 +412,27 @@ export default function IllustrationHelper() {
                       <div className="flex-shrink-0">
                         <CheckCircle className="h-5 w-5 text-green-500" />
                       </div>
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-700 text-sm sm:text-base break-words">{item}</span>
                     </li>
                   ))}
                 </ul>
               </TabsContent>
 
               <TabsContent value="request-script" className="mt-0">
-                <Card className="mb-6 p-6 bg-blue-50 border-blue-100">
-                  <h3 className="text-lg font-medium text-[#4B6FEE] mb-2">{content.introCards.script}</h3>
+                <Card className="mb-6 p-4 sm:p-6 bg-blue-50 border-blue-100">
+                  <h3 className="text-base sm:text-lg font-medium text-[#4B6FEE] mb-2 break-words">
+                    {content.introCards.script}
+                  </h3>
                 </Card>
                 <div className="space-y-4">
-                  <div className="bg-gray-50 rounded-lg p-6 text-gray-700 border border-gray-200">
-                    <p className="whitespace-pre-line">{content.script}</p>
+                  <div className="bg-gray-50 rounded-lg p-4 sm:p-6 text-gray-700 border border-gray-200 overflow-x-auto whitespace-pre-line break-words">
+                    <p className="text-sm sm:text-base">{content.script}</p>
                   </div>
                   <div className="flex items-center justify-end">
                     <Button
                       variant="outline"
                       className={cn(
-                        "gap-2 transition-all duration-300 px-6 py-3 rounded-full border-[#4B6FEE] text-[#4B6FEE] hover:scale-105",
+                        "gap-2 transition-all duration-300 px-4 sm:px-6 py-2 sm:py-3 rounded-full border-[#4B6FEE] text-[#4B6FEE] hover:scale-105",
                         copySuccess && "bg-[#4B6FEE] text-white hover:bg-[#4B6FEE]/90",
                       )}
                       onClick={() => handleCopyClick(content.script)}
@@ -441,8 +447,10 @@ export default function IllustrationHelper() {
               </TabsContent>
 
               <TabsContent value="next-steps" className="mt-0">
-                <Card className="mb-6 p-6 bg-blue-50 border-blue-100">
-                  <h3 className="text-lg font-medium text-[#4B6FEE] mb-2">{content.introCards.action}</h3>
+                <Card className="mb-6 p-4 sm:p-6 bg-blue-50 border-blue-100">
+                  <h3 className="text-base sm:text-lg font-medium text-[#4B6FEE] mb-2 break-words">
+                    {content.introCards.action}
+                  </h3>
                 </Card>
                 <div className="space-y-4">
                   {steps.map((step, index) => (
@@ -458,7 +466,9 @@ export default function IllustrationHelper() {
                           {index + 1}
                         </div>
                         <div className="flex-1 text-left">
-                          <div className="font-medium text-[#4B6FEE]">{step.title}</div>
+                          <div className="font-medium text-[#4B6FEE] text-sm sm:text-base break-words">
+                            {step.title}
+                          </div>
                         </div>
                         {expandedStep === index ? (
                           <ChevronUp className="h-5 w-5 text-[#4B6FEE]" />
@@ -467,18 +477,18 @@ export default function IllustrationHelper() {
                         )}
                       </button>
                       {expandedStep === index && (
-                        <div className="px-4 pb-4 pl-16 text-gray-600">
+                        <div className="px-4 pb-4 pl-16 text-gray-600 text-sm sm:text-base">
                           {step.script ? (
                             <>
-                              <p className="mb-2">{step.description}</p>
-                              <div className="bg-gray-50 rounded-lg p-4 text-gray-700 border border-gray-200">
-                                <p className="whitespace-pre-line">{content.script}</p>
+                              <p className="mb-2 break-words">{step.description}</p>
+                              <div className="bg-gray-50 rounded-lg p-3 sm:p-4 text-gray-700 border border-gray-200 overflow-x-auto whitespace-pre-line break-words">
+                                <p className="text-sm">{content.script}</p>
                               </div>
                               <div className="flex items-center justify-end mt-2">
                                 <Button
                                   variant="outline"
                                   className={cn(
-                                    "gap-2 transition-all duration-300 px-4 py-2 rounded-full border-[#4B6FEE] text-[#4B6FEE] hover:scale-105",
+                                    "gap-2 transition-all duration-300 px-3 sm:px-4 py-1 sm:py-2 rounded-full border-[#4B6FEE] text-[#4B6FEE] hover:scale-105 text-sm",
                                     copySuccess && "bg-[#4B6FEE] text-white hover:bg-[#4B6FEE]/90",
                                   )}
                                   onClick={() => handleCopyClick(content.script)}
@@ -495,12 +505,12 @@ export default function IllustrationHelper() {
                               {step.description.map((item, i) => (
                                 <li key={i} className="flex items-start gap-2">
                                   <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                                  <span>{item}</span>
+                                  <span className="break-words">{item}</span>
                                 </li>
                               ))}
                             </ul>
                           ) : (
-                            <p>{step.description}</p>
+                            <p className="break-words">{step.description}</p>
                           )}
                         </div>
                       )}
@@ -511,11 +521,11 @@ export default function IllustrationHelper() {
             </Tabs>
           </CardContent>
         </Card>
-
-        <div className="flex flex-col md:flex-row justify-between gap-4 mt-8">
+        // Update the bottom navigation buttons
+        <div className="flex flex-col sm:flex-row justify-between gap-4 mt-8">
           <Button
             variant="outline"
-            className="border-[#4B6FEE] text-[#4B6FEE] px-6 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
+            className="border-[#4B6FEE] text-[#4B6FEE] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
             onClick={() => setStep(2)}
           >
             <span className="flex items-center gap-2">
@@ -523,10 +533,10 @@ export default function IllustrationHelper() {
             </span>
           </Button>
           <Button
-            className="bg-[#4B6FEE] hover:bg-blue-700 text-white px-6 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
+            className="bg-[#4B6FEE] hover:bg-blue-700 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:transform hover:scale-105 group"
             onClick={() => router.push("/upload")}
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 text-sm sm:text-lg">
               Already Have an Illustration?
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
