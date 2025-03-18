@@ -33,7 +33,7 @@ export default function PricingPage() {
                 </div>
                 <div className="h-px w-full bg-gray-100 my-4"></div>
                 <p className="text-gray-600 font-medium mb-4">
-                  Basic policy overview that's perfect for an initial assessment
+                  Basic policy overview that&apos;s perfect for an initial assessment
                 </p>
               </CardHeader>
               <CardContent className="flex-grow pt-6 pb-8 px-6">
