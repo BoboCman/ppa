@@ -11,7 +11,7 @@ export const BETA_USERS: BetaUser[] = [
   { email: 'bobchwalk@outlook.com', password: 'test321' },
   { email: 'rpc@gmail.com', password: 'rpc123' },
   { email: 'bobchwalk@gmail.com', password: 'bob123' },
-  { email: 'tester1@company.com', password: 'test456' },
+  { email: 'kejoru@gmail.com', password: 'kevin1' },
   { email: 'demo1@insurance.com', password: 'demo789' },
   { email: 'pilot1@review.com', password: 'pilot321' },
   { email: 'trial1@planner.com', password: 'trial567' },
