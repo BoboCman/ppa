@@ -14,7 +14,7 @@ import {
   Lock,
   LineChart,
   ChevronDown,
-  UploadIcon,
+  Upload,
   Brain,
   Inbox,
 } from "lucide-react"
@@ -25,7 +25,19 @@ export const Hero: FC = () => {
   const router = useRouter()
 
   const handleViewSample = (pdfUrl: string) => {
-    router.push(`/view-pdf?pdfUrl=/${pdfUrl}`)
+    // Check if the PDF exists in the public directory
+    fetch(pdfUrl)
+      .then((response) => {
+        if (response.ok) {
+          router.push(`/view-pdf?pdfUrl=${pdfUrl}`)
+        } else {
+          alert("Sample PDF not found. Please make sure to upload the sample PDFs to your public directory.")
+        }
+      })
+      .catch((error) => {
+        console.error("Error checking PDF:", error)
+        alert("Error checking sample PDF. Please make sure the sample PDFs are available.")
+      })
   }
 
   const scrollToSection = (elementId: string) => {
@@ -85,7 +97,7 @@ export const Hero: FC = () => {
                     </div>
                   </div>
                   <div className="flex items-center text-[#4B6FEE] font-bold text-lg">
-                    <UploadIcon className="w-6 h-6 mr-2" aria-hidden="true" />
+                    <Upload className="w-6 h-6 mr-2" aria-hidden="true" />
                     <span>Simply upload any in-force illustration and let our AI handle the rest</span>
                   </div>
                   <div className="mt-4 flex flex-col md:flex-row items-center gap-4">
@@ -95,7 +107,7 @@ export const Hero: FC = () => {
                     >
                       <span className="flex items-center gap-2">
                         Upload a Policy
-                        <UploadIcon className="w-5 h-5" />
+                        <Upload className="w-5 h-5" />
                       </span>
                     </Button>
                     <Button
@@ -131,7 +143,7 @@ export const Hero: FC = () => {
                   {
                     title: "Upload a Policy",
                     description: "Simply upload a policy illustration and provide an email. That is all we need.",
-                    icon: <UploadIcon className="w-6 h-6" />,
+                    icon: <Upload className="w-6 h-6" />,
                     link: {
                       text: "Need help getting an illustration?",
                       href: "/illustration-helper",
@@ -269,8 +281,12 @@ export const Hero: FC = () => {
             {/* Sample Reports */}
             <div>
               <div className="text-center mb-12 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">Two-Tier Review for Complete Policy Clarity</h2>
-                <p className="text-gray-600 text-lg">Our AI delivers two complementary reports tailored to different policy review needs</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#4B6FEE]">
+                  Two-Tier Review for Complete Policy Clarity
+                </h2>
+                <p className="text-gray-600 text-lg">
+                  Our AI delivers two complementary reports tailored to different policy review needs
+                </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -346,7 +362,9 @@ export const Hero: FC = () => {
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold">Ready for an AI-Powered Policy Review?</h2>
                 </div>
-                <p className="text-xl text-blue-100">Upload any in-force illustration and receive analysis reports within minutes</p>
+                <p className="text-xl text-blue-100">
+                  Upload any in-force illustration and receive analysis reports within minutes
+                </p>
               </CardHeader>
               <CardContent className="flex justify-center p-8 bg-gradient-to-b from-white to-blue-50/30">
                 <Button
@@ -369,3 +387,4 @@ export const Hero: FC = () => {
 }
 
 export default Hero
+
