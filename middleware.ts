@@ -11,6 +11,12 @@ const BLOCK_DURATION = 5 * 60 * 1000; // 5 minute block for abusive IPs
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  
+  // Skip middleware for PDF files in sample_reports directory
+  if (pathname.startsWith('/sample_reports/') && pathname.endsWith('.pdf')) {
+    return NextResponse.next();
+  }
+  
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';
   
   // ===== SECURITY CHECKS =====
@@ -156,15 +162,23 @@ function addSecurityHeaders(response: NextResponse) {
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  // Tight CSP that can be adjusted based on your site's needs
-  response.headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'");
+  // Updated CSP to allow PDFs
+  response.headers.set('Content-Security-Policy', 
+    "default-src 'self'; " +
+    "script-src 'self' 'unsafe-inline'; " +
+    "style-src 'self' 'unsafe-inline'; " +
+    "img-src 'self' data:; " +
+    "connect-src 'self'; " +
+    "object-src 'self'; " +  // Allow PDFs in object tags
+    "frame-src 'self';"      // Allow PDFs in iframes
+  );
   
   return response;
 }
 
 export const config = {
   matcher: [
-    // Protect all routes except static assets
-    '/((?!_next/static|_next/image|favicon.ico).*)',
+    // Protect all routes except static assets and PDF files
+    '/((?!_next/static|_next/image|favicon.ico|sample_reports\/.*.pdf).*)',
   ]
 }
