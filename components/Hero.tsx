@@ -25,14 +25,7 @@ export const Hero: FC = () => {
   const router = useRouter()
 
   const handleViewSample = (pdfUrl: string) => {
-    // Check if it's an external URL or a local path
-    if (pdfUrl.startsWith('http')) {
-      // For external URLs (like Vercel Blob), pass the full URL
-      router.push(`/view-pdf?pdfUrl=${encodeURIComponent(pdfUrl)}`)
-    } else {
-      // For local paths, add the leading slash
-      router.push(`/view-pdf?pdfUrl=/${pdfUrl}`)
-    }
+    router.push(`/view-pdf?pdfUrl=/${pdfUrl}`)
   }
 
   const scrollToSection = (elementId: string) => {
@@ -291,7 +284,7 @@ export const Hero: FC = () => {
                       "Perfect for initial assessment",
                       "Core Policy Highlights",
                     ],
-                    sample: "https://phw1ruho25yy63z9.public.blob.vercel-storage.com/Policy%20Snapshot%20Report_SAMPLE-D8KgE7TiALHe8bMc4OwPN86irMm127.pdf",
+                    sample: "sample_reports/Policy Snapshot Report_SAMPLE.pdf",
                   },
                   {
                     title: "Policy Review Report",
@@ -302,7 +295,7 @@ export const Hero: FC = () => {
                       "Risk Mitigation Strategies",
                       "Ideal for advisor consultations",
                     ],
-                    sample: "https://phw1ruho25yy63z9.public.blob.vercel-storage.com/Policy%20Analysis%20Report_SAMPLE-v25z2ICvJf1HnxeRAsnbu67uzgfHlZ.pdf",
+                    sample: "sample_reports/Policy Analysis Report_SAMPLE.pdf",
                   },
                 ].map((item, index) => (
                   <Card
