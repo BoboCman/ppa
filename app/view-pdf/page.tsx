@@ -7,14 +7,18 @@ const PDFViewer = () => {
   const pdfUrl = searchParams.get("pdfUrl")
   
   // Process the URL to ensure it works correctly
-  let displayUrl = pdfUrl;
+  let displayUrl = '';
   
-  // If the URL doesn't already start with http/https, treat it as a relative path
-  if (pdfUrl && !pdfUrl.startsWith('http')) {
-    // Remove any leading slash to prevent double slashes
-    const cleanPath = pdfUrl.startsWith('/') ? pdfUrl.substring(1) : pdfUrl;
-    // Create an absolute URL based on the current origin
-    displayUrl = `${window.location.origin}/${cleanPath}`;
+  if (pdfUrl) {
+    // If the URL doesn't already start with http/https, treat it as a relative path
+    if (!pdfUrl.startsWith('http')) {
+      // Remove any leading slash to prevent double slashes
+      const cleanPath = pdfUrl.startsWith('/') ? pdfUrl.substring(1) : pdfUrl;
+      // Create an absolute URL based on the current origin
+      displayUrl = `${window.location.origin}/${cleanPath}`;
+    } else {
+      displayUrl = pdfUrl;
+    }
   }
   
   return (
